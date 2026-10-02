@@ -2,7 +2,7 @@
 
 Install packages for HiveOS. This repository publishes the license texts and the release archives. It does not publish source code.
 
-fear-miner is dual-licensed under the MIT License ([LICENSE-MIT](LICENSE-MIT)) or the Apache License, Version 2.0 ([LICENSE-APACHE](LICENSE-APACHE)). Third-party software in the package is listed in [NOTICE](NOTICE).
+fear-miner is proprietary. The [LICENSE](LICENSE) grants use of the unmodified software only. Modification, extraction, and attempts to break the protected encoding are prohibited. Third-party software in the package is listed in [NOTICE](NOTICE).
 
 ## Flight sheet
 

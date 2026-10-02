@@ -1,7 +1,5 @@
-fear-miner is dual-licensed under the MIT License or the Apache License, Version 2.0.
-The texts are LICENSE-MIT and LICENSE-APACHE in this directory.
-
-This package also contains third-party software.
+fear-miner is copyrighted software. The use terms are in the LICENSE file.
+Third-party components shipped in this package stay under their own licenses.
 
 llama.cpp and ggml (libkeryx-llama.so)
   Copyright (c) the ggml authors
