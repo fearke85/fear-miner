@@ -2,7 +2,7 @@
 
 **English** · [Português (Brasil)](README.pt-BR.md)
 
-NVIDIA GPU miner for Keryx (keryxhash). Packages for HiveOS, Linux and Windows.
+Multi-algorithm NVIDIA GPU miner. Packages for HiveOS, Linux and Windows.
 
 [![release](https://img.shields.io/badge/release-0.0.31-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v0.0.31)
 ![HiveOS](https://img.shields.io/badge/HiveOS-jammy-3a9a3a)
@@ -10,13 +10,24 @@ NVIDIA GPU miner for Keryx (keryxhash). Packages for HiveOS, Linux and Windows.
 ![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-3a9a3a)
 [![Discord](https://img.shields.io/badge/chat-Discord-5865f2)](https://discord.gg/uK93NPAhbd)
 
+## Coins
+
+Pick your coin. Its page has the pool and wallet settings, the cards it supports and its own
+options.
+
+| Coin | Algorithm | Cards | Docs |
+| --- | --- | --- | --- |
+| Keryx | `keryxhash` | NVIDIA Turing or newer, 8 GB or more | [coins/keryx](coins/keryx/README.md) |
+
 > [!WARNING]
-> **The H14 hard fork is live** (DAA 121,985,000, 2026-10-09). Versions before 0.0.22 are
-> invalid: the network rejects their shares and blocks. Solo miners need keryx-node 1.6.4 or newer.
+> **Keryx:** the H14 hard fork is live. Versions before 0.0.22 are invalid.
+> See [coins/keryx](coins/keryx/README.md).
 
 ## Download: 0.0.31 (2026-10-09)
 
-| Platform | File | Guide |
+One package per platform. It mines every coin in the table above.
+
+| Platform | File | Install guide |
 | --- | --- | --- |
 | HiveOS | [fear-miner-0.0.31.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-0.0.31.tar.gz) | [docs/en/hiveos.md](docs/en/hiveos.md) |
 | Linux | [fear-miner-linux-0.0.31.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-linux-0.0.31.tar.gz) | [docs/en/linux.md](docs/en/linux.md) |
@@ -25,79 +36,30 @@ NVIDIA GPU miner for Keryx (keryxhash). Packages for HiveOS, Linux and Windows.
 What changed: [release notes](https://github.com/fearke85/fear-miner/releases/tag/v0.0.31) ·
 [CHANGELOG](CHANGELOG.md). Checksums are on the release page.
 
-## Quick start
+## Getting started
 
-<details open>
-<summary><b>HiveOS</b></summary>
+1. Choose your coin in the table above and note its pool, wallet and algorithm settings.
+2. Install the package for your platform with its guide: [HiveOS](docs/en/hiveos.md),
+   [Linux](docs/en/linux.md) or [Windows](docs/en/windows.md).
+3. Check that it mines: the HiveOS dashboard, or `curl 127.0.0.1:4060/stats` on the rig.
 
-Create a flight sheet with miner **Custom**:
+## Requirements for every coin
 
-| Field | Value |
-| --- | --- |
-| Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-0.0.31.tar.gz` |
-| Wallet and worker template | `%WAL%.%WORKER_NAME%` (wallet `keryx:YOUR_ADDRESS`) |
-| Pool URL | `stratum+tcp://krx.suprnova.cc:4404`, or `grpc://IP:PORT` of your node for solo |
-| Password | `x` |
-
-To update later, change the version in the Installation URL. The rest of the flight sheet stays.
-Full guide: [docs/en/hiveos.md](docs/en/hiveos.md).
-</details>
-
-<details>
-<summary><b>Linux</b></summary>
-
-```
-tar -xzf fear-miner-linux-0.0.31.tar.gz
-cd fear-miner
-nano run.sh     # set WALLET, WORKER and POOL (or NODE for solo)
-./run.sh
-```
-
-Full guide: [docs/en/linux.md](docs/en/linux.md).
-</details>
-
-<details>
-<summary><b>Windows</b></summary>
-
-Unzip `fear-miner-windows-0.0.31.zip`, open `start.bat` in Notepad, set `WALLET`, `WORKER`
-and `POOL` (or `NODE` for solo), save, and double-click it.
-
-Full guide: [docs/en/windows.md](docs/en/windows.md).
-</details>
-
-## Requirements
-
-- NVIDIA Turing or newer (RTX 20xx, 30xx, 40xx, 50xx) with 8 GB or more. 6 GB cards mine tier 0
-  next to another card. Pascal (GTX 10xx, P104/P106) and older are not supported.
+- An NVIDIA card the coin supports (see its page).
 - NVIDIA driver 580 or newer (CUDA 13.2). The packages bring the CUDA libraries, not the driver.
-- Free disk for the model of each tier you mine (table below). It downloads on the first start.
-- HiveOS: the Ubuntu 22.04 (jammy) image. The 20.04 image is not supported.
+- HiveOS on the Ubuntu 22.04 (jammy) image, Linux with glibc 2.35 or newer, or Windows 10 / 11.
 
-## Which tier does my card mine?
+## Documentation
 
-The miner picks the highest tier each card supports by itself. You do not need `--tier`.
-
-Free disk each tier needs for its model download:
-
-| Tier | Free disk |
-| --- | --- |
-| 0 | ~6.7 GB |
-| 1 | ~8.5 GB |
-| 2 | ~10 GB |
-| 3 | ~17 GB |
-| 4 | ~30 GB |
-
-## Is it working?
-
-- Hashrate and shares: `curl 127.0.0.1:4060/stats` on the rig. On HiveOS they show in the dashboard.
-- Warnings, missed AI requests and crash reports go to `log.txt`: `/var/lib/fear-miner/log.txt`
-  on HiveOS, next to the miner on Linux and Windows.
+| Topic | For every coin | Keryx |
+| --- | --- | --- |
+| Install | [HiveOS](docs/en/hiveos.md) · [Linux](docs/en/linux.md) · [Windows](docs/en/windows.md) | [Settings per platform](coins/keryx/README.md#settings) |
+| Options | [Miner options](docs/en/options.md) | [Keryx options](coins/keryx/docs/en/options.md) |
+| Problems | [Troubleshooting](docs/en/troubleshooting.md) | [Keryx troubleshooting](coins/keryx/docs/en/troubleshooting.md) |
+| Solo mining | | [Keryx solo](coins/keryx/docs/en/solo.md) |
 
 ## Help
 
-- [Troubleshooting](docs/en/troubleshooting.md)
-- [Solo mining](docs/en/solo.md) · [All options](docs/en/configuration.md)
 - [Discord](https://discord.gg/uK93NPAhbd)
 - [Open an issue](https://github.com/fearke85/fear-miner/issues/new/choose) and attach `log.txt`
 

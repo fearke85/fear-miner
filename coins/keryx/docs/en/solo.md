@@ -1,6 +1,6 @@
 # Solo mining
 
-**English** · [Português (Brasil)](../pt-BR/solo.md) · [Back to README](../../README.md)
+**English** · [Português (Brasil)](../pt-BR/solo.md) · [Back to Keryx](../../README.md)
 
 Solo mining sends blocks to your own Keryx node instead of a pool.
 

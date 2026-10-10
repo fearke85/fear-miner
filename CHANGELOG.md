@@ -1,7 +1,9 @@
 # Changelog
 
-What changed in each version, newest first. Versions before 0.0.22 are invalid since the H14 hard
-fork (2026-10-09) and are not listed.
+What changed in each version, newest first. One version of fear-miner covers every coin; a change
+for one coin names it. Every change listed so far is for Keryx.
+
+Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
 ## 0.0.31 (2026-10-09)
 

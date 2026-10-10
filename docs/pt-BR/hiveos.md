@@ -2,34 +2,33 @@
 
 [English](../en/hiveos.md) · **Português (Brasil)** · [Voltar ao README](../../README.pt-BR.md)
 
+Como instalar o fear-miner no HiveOS, para qualquer moeda. Os valores da sua moeda (algoritmo,
+template da carteira, Pool URL) estão na página dela: [Keryx](../../coins/keryx/README.pt-BR.md#flight-sheet-do-hiveos).
+
 ## Antes de começar
 
 - HiveOS com a imagem Ubuntu 22.04 (jammy). A imagem 20.04 não é suportada.
 - Driver NVIDIA 580 ou mais novo. Atualize pelo painel do HiveOS ou com `nvidia-driver-update`.
-- Placas: Turing ou mais novas. Veja [qual tier sua placa minera](../../README.pt-BR.md#qual-tier-minha-placa-minera).
-- Espaço em disco para o modelo de cada tier minerado. Um pendrive de 32 GB comporta o tier 2.
+- Uma placa que a sua moeda suporte, e o espaço em disco que a página da moeda pede.
 
 ## Flight sheet
 
-Crie um flight sheet com o miner **Custom** e preencha:
+Crie um flight sheet com o miner **Custom**:
 
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
 | Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-0.0.31.tar.gz` |
-| Hash algorithm | `keryxhash` |
-| Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
-| Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORTA` do seu node |
+| Hash algorithm | da página da sua moeda |
+| Wallet and worker template | da página da sua moeda |
+| Pool URL | da página da sua moeda |
 | Password | `x`, ou a senha da pool |
 | Extra config arguments | Deixe vazio, ou veja abaixo |
 
-A carteira é o seu endereço Keryx, `keryx:...`. A Pool URL precisa do prefixo: `stratum+tcp://`
-para pool, `grpc://` para node. Um `host:porta` sem prefixo ou com `http://` é recusado.
+A Pool URL precisa do prefixo: `stratum+tcp://` para pool, `grpc://` para node. Um `host:porta` sem
+prefixo ou com `http://` é recusado.
 
-Aplique o flight sheet. A primeira execução baixa o modelo, o que leva alguns minutos. O painel
-mostra o hashrate quando as placas começam a minerar.
-
-Para minerar solo, leia antes o [solo.md](solo.md): a primeira execução pede um passo na carteira.
+Aplique o flight sheet. O painel mostra o hashrate quando as placas começam a minerar.
 
 ## Instalar pelo console da rig
 
@@ -45,36 +44,32 @@ Troque a versão na Installation URL, nos dois lugares: em `v0.0.31` e em
 `fear-miner-0.0.31.tar.gz`. O resto do flight sheet continua igual. Com a URL antiga, a rig
 continua instalando a versão antiga.
 
-Modelos, arquivos de escrow e o log ficam em `/var/lib/fear-miner` entre atualizações e
-reinstalações.
+Tudo o que o miner guarda (modelos, chaves, o log) fica em `/var/lib/fear-miner` entre
+atualizações e reinstalações.
 
 ## Extra config arguments
 
-Opções do miner vão antes de `--`, opções do Keryx depois. Exemplos comuns:
+Opções do miner vão antes de `--`, opções da moeda depois:
+
+```
+--device 0,2 --stats 0.0.0.0:4060 -- <opções da moeda>
+```
 
 | O quê | Extra config arguments |
 | --- | --- |
 | Minerar só nas placas 0 e 2 | `--device 0,2` |
-| Forçar tier 2 em todas as placas | `-- --tier 2` |
-| Placas 1 e 6, tier 3 nas duas | `--device 1,6 -- --tier 3,3` |
 | Abrir a API de stats para a rede local | `--stats 0.0.0.0:4060` |
-| Solo: primeira execução com o escrow cert | `-- --escrow-cert COLE_OS_128_CARACTERES_HEX` |
-| Guardar os modelos em outro disco | `-- --models-dir /data/models` |
 
-O pacote já roda em modo headless. Não adicione `--headless`. Todas as opções estão em
-[configuration.md](configuration.md).
+O pacote já roda em modo headless. Opções do miner: [options.md](options.md). Opções da moeda: a
+página dela ([Keryx](../../coins/keryx/docs/pt-BR/options.md)).
 
 ## Onde fica cada coisa
 
 | O quê | Onde |
 | --- | --- |
-| Log com avisos, pedidos perdidos e relatórios de crash | `/var/lib/fear-miner/log.txt` |
-| Modelos | `/var/lib/fear-miner/models` |
-| Chave, cert e estado do escrow | `/var/lib/fear-miner` |
+| Log com avisos, erros e relatórios de crash | `/var/lib/fear-miner/log.txt` |
+| Dados que o miner guarda | `/var/lib/fear-miner` |
 | Console do miner | `miner` no shell da rig, ou o log do miner no painel |
-
-Um modelo que outro miner da rig já baixou (por exemplo, o `/hive/miners/custom/models` do miner
-da Suprnova) é verificado e reaproveitado, sem segunda cópia no disco.
 
 ## Uso de CPU em rigs com poucos núcleos
 

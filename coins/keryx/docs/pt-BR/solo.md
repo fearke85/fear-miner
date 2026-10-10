@@ -1,6 +1,6 @@
 # Mineração solo
 
-[English](../en/solo.md) · **Português (Brasil)** · [Voltar ao README](../../README.pt-BR.md)
+[English](../en/solo.md) · **Português (Brasil)** · [Voltar ao Keryx](../../README.pt-BR.md)
 
 Na mineração solo, os blocos vão para o seu próprio node Keryx, em vez de uma pool.
 

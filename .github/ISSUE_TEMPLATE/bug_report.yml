@@ -14,6 +14,14 @@ body:
     validations:
       required: true
   - type: dropdown
+    id: coin
+    attributes:
+      label: Coin / Moeda
+      options:
+        - Keryx (keryxhash)
+    validations:
+      required: true
+  - type: dropdown
     id: platform
     attributes:
       label: Platform / Plataforma
