@@ -31,7 +31,8 @@ cards keep mining. Reseat or replace that card's riser or cable.
 
 The next start writes a crash report into `log.txt`: the card, its overclock offsets, temperature,
 power, PCIe link, the GPU errors the system logged, and the likeliest cause. The most common fix is
-a lower memory or core overclock on that card.
+a lower memory or core overclock on that card. Juliano Caju's
+[overclock table](https://www.julianocaju.com.br/en/overclocks/) lists settings per card and coin.
 
 ## Asking for help
 

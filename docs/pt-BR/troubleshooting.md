@@ -32,7 +32,9 @@ outras placas continuam minerando. Reencaixe ou troque o riser ou o cabo dessa p
 
 A próxima execução grava um relatório de crash no `log.txt`: a placa, os offsets de overclock,
 temperatura, consumo, link PCIe, os erros de GPU que o sistema registrou e a causa mais provável. A
-correção mais comum é baixar o overclock de memória ou de core dessa placa.
+correção mais comum é baixar o overclock de memória ou de core dessa placa. A
+[tabela de overclocks](https://www.julianocaju.com.br/overclocks/) do Juliano Caju traz valores por
+placa e moeda.
 
 ## Pedir ajuda
 

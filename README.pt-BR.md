@@ -58,6 +58,15 @@ O que mudou: [notas da release](https://github.com/fearke85/fear-miner/releases/
 | Problemas | [Solução de problemas](docs/pt-BR/troubleshooting.md) | [Problemas do Keryx](coins/keryx/docs/pt-BR/troubleshooting.md) |
 | Mineração solo | | [Keryx solo](coins/keryx/docs/pt-BR/solo.md) |
 
+## Ferramentas da comunidade
+
+O site do [Juliano Caju](https://www.julianocaju.com.br/calculadora/) tem ferramentas para várias
+moedas, em português e inglês:
+
+- [Tabela de overclocks](https://www.julianocaju.com.br/overclocks/) por placa e moeda
+- [Calculadora de mineração](https://www.julianocaju.com.br/calculadora/)
+- [Rentabilidade por placa](https://www.julianocaju.com.br/rentabilidade/)
+
 ## Ajuda
 
 - [Discord](https://discord.gg/uK93NPAhbd)

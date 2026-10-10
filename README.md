@@ -58,6 +58,15 @@ What changed: [release notes](https://github.com/fearke85/fear-miner/releases/ta
 | Problems | [Troubleshooting](docs/en/troubleshooting.md) | [Keryx troubleshooting](coins/keryx/docs/en/troubleshooting.md) |
 | Solo mining | | [Keryx solo](coins/keryx/docs/en/solo.md) |
 
+## Community tools
+
+[Juliano Caju](https://www.julianocaju.com.br/en/calculator/) has tools for several coins, in
+English and Portuguese:
+
+- [Overclock table](https://www.julianocaju.com.br/en/overclocks/) per card and coin
+- [Mining calculator](https://www.julianocaju.com.br/en/calculator/)
+- [Profitability per card](https://www.julianocaju.com.br/en/profitability/)
+
 ## Help
 
 - [Discord](https://discord.gg/uK93NPAhbd)
