@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Discord
+    url: https://discord.gg/uK93NPAhbd
+    about: Questions, setup help and hashrate comparisons / Dúvidas, ajuda na instalação e comparação de hashrate
+  - name: Troubleshooting / Solução de problemas
+    url: https://github.com/fearke85/fear-miner/blob/main/docs/en/troubleshooting.md
+    about: Common problems and fixes / Problemas comuns e como resolver

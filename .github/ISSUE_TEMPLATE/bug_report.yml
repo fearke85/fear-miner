@@ -1,0 +1,57 @@
+name: Problem report / Relatar problema
+description: The miner does not start, crashes, mines slowly or takes strikes / O miner não inicia, trava, minera devagar ou leva strikes
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Check the [troubleshooting guide](https://github.com/fearke85/fear-miner/blob/main/docs/en/troubleshooting.md) first. English or Portuguese.
+        Veja antes a [solução de problemas](https://github.com/fearke85/fear-miner/blob/main/docs/pt-BR/troubleshooting.md). Inglês ou português.
+  - type: input
+    id: version
+    attributes:
+      label: Miner version / Versão do miner
+      placeholder: "0.0.31"
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform / Plataforma
+      options:
+        - HiveOS
+        - Linux
+        - Windows
+    validations:
+      required: true
+  - type: dropdown
+    id: mode
+    attributes:
+      label: Pool or solo / Pool ou solo
+      options:
+        - Pool
+        - Solo
+    validations:
+      required: true
+  - type: input
+    id: cards
+    attributes:
+      label: Cards and driver / Placas e driver
+      placeholder: "2x RTX 3070 8 GB + 1x RTX 3060 12 GB, driver 580.95"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened / O que aconteceu
+      description: What you expected and what you saw / O que você esperava e o que viu
+    validations:
+      required: true
+  - type: textarea
+    id: log
+    attributes:
+      label: log.txt
+      description: |
+        Drag the file here. HiveOS: /var/lib/fear-miner/log.txt. Linux and Windows: next to the miner.
+        Arraste o arquivo aqui. HiveOS: /var/lib/fear-miner/log.txt. Linux e Windows: ao lado do miner.
+    validations:
+      required: true
