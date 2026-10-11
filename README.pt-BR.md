@@ -4,7 +4,7 @@
 
 Miner multi-algoritmo para GPUs NVIDIA. Pacotes para HiveOS, Linux e Windows.
 
-[![release](https://img.shields.io/badge/release-0.0.31-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v0.0.31)
+[![release](https://img.shields.io/badge/release-0.0.32-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v0.0.32)
 ![HiveOS](https://img.shields.io/badge/HiveOS-jammy-3a9a3a)
 ![Linux](https://img.shields.io/badge/Linux-glibc%202.35%2B-3a9a3a)
 ![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-3a9a3a)
@@ -23,17 +23,17 @@ as opções próprias.
 > **Keryx:** o hard fork H14 está ativo. Versões anteriores à 0.0.22 são inválidas.
 > Veja [coins/keryx](coins/keryx/README.pt-BR.md).
 
-## Download: 0.0.31 (2026-10-09)
+## Download: 0.0.32 (2026-10-11)
 
 Um pacote por plataforma. Ele minera todas as moedas da tabela acima.
 
 | Plataforma | Arquivo | Guia de instalação |
 | --- | --- | --- |
-| HiveOS | [fear-miner-0.0.31.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-0.0.31.tar.gz) | [docs/pt-BR/hiveos.md](docs/pt-BR/hiveos.md) |
-| Linux | [fear-miner-linux-0.0.31.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-linux-0.0.31.tar.gz) | [docs/pt-BR/linux.md](docs/pt-BR/linux.md) |
-| Windows | [fear-miner-windows-0.0.31.zip](https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-windows-0.0.31.zip) | [docs/pt-BR/windows.md](docs/pt-BR/windows.md) |
+| HiveOS | [fear-miner-0.0.32.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-0.0.32.tar.gz) | [docs/pt-BR/hiveos.md](docs/pt-BR/hiveos.md) |
+| Linux | [fear-miner-linux-0.0.32.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-linux-0.0.32.tar.gz) | [docs/pt-BR/linux.md](docs/pt-BR/linux.md) |
+| Windows | [fear-miner-windows-0.0.32.zip](https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-windows-0.0.32.zip) | [docs/pt-BR/windows.md](docs/pt-BR/windows.md) |
 
-O que mudou: [notas da release](https://github.com/fearke85/fear-miner/releases/tag/v0.0.31) ·
+O que mudou: [notas da release](https://github.com/fearke85/fear-miner/releases/tag/v0.0.32) ·
 [CHANGELOG](CHANGELOG.md) (em inglês). Os checksums estão na página da release.
 
 ## Como começar

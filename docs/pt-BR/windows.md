@@ -15,8 +15,8 @@ dela: [Keryx](../../coins/keryx/README.pt-BR.md#runsh-linux-e-startbat-windows).
 
 ## Instalar
 
-1. Baixe o `fear-miner-windows-0.0.31.zip` na
-   [página da release](https://github.com/fearke85/fear-miner/releases/tag/v0.0.31).
+1. Baixe o `fear-miner-windows-0.0.32.zip` na
+   [página da release](https://github.com/fearke85/fear-miner/releases/tag/v0.0.32).
 2. Extraia numa pasta só dele, por exemplo `C:\fear-miner`.
 3. Clique com o botão direito no `start.bat` e escolha **Editar** (ou abra no Bloco de Notas).
 

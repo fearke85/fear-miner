@@ -14,8 +14,8 @@ your coin are on its page: [Keryx](../../coins/keryx/README.md#runsh-linux-and-s
 ## Install
 
 ```
-wget https://github.com/fearke85/fear-miner/releases/download/v0.0.31/fear-miner-linux-0.0.31.tar.gz
-tar -xzf fear-miner-linux-0.0.31.tar.gz
+wget https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-linux-0.0.32.tar.gz
+tar -xzf fear-miner-linux-0.0.32.tar.gz
 cd fear-miner
 nano run.sh
 ```

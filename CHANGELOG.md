@@ -5,6 +5,12 @@ for one coin names it. Every change listed so far is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 0.0.32 (2026-10-11)
+
+- NVIDIA CMP 170HX now mines. Cards unlocked to 64 GB mine tier 4. Measured on two unlocked
+  cards at a 200 W power limit: ~3.2 MH/s per card, 6.4 MH/s for the rig.
+- No change for other cards.
+
 ## 0.0.31 (2026-10-09)
 
 - Cards on narrow PCIe links that mine a tier larger than their memory get much faster, with

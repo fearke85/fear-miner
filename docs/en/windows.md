@@ -14,8 +14,8 @@ How to install fear-miner on Windows, for any coin. The values for your coin are
 
 ## Install
 
-1. Download `fear-miner-windows-0.0.31.zip` from the
-   [release page](https://github.com/fearke85/fear-miner/releases/tag/v0.0.31).
+1. Download `fear-miner-windows-0.0.32.zip` from the
+   [release page](https://github.com/fearke85/fear-miner/releases/tag/v0.0.32).
 2. Extract it to a folder of its own, for example `C:\fear-miner`.
 3. Right-click `start.bat`, choose **Edit** (or open it in Notepad).
 
