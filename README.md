@@ -4,7 +4,7 @@
 
 Multi-algorithm NVIDIA GPU miner. Packages for HiveOS, Linux and Windows.
 
-[![release](https://img.shields.io/badge/release-0.0.32-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v0.0.32)
+[![release](https://img.shields.io/badge/release-1.0.0-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v1.0.0)
 ![HiveOS](https://img.shields.io/badge/HiveOS-jammy-3a9a3a)
 ![Linux](https://img.shields.io/badge/Linux-glibc%202.35%2B-3a9a3a)
 ![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-3a9a3a)
@@ -23,17 +23,17 @@ options.
 > **Keryx:** the H14 hard fork is live. Versions before 0.0.22 are invalid.
 > See [coins/keryx](coins/keryx/README.md).
 
-## Download: 0.0.32 (2026-10-11)
+## Download: 1.0.0 (2026-10-12)
 
 One package per platform. It mines every coin in the table above.
 
 | Platform | File | Install guide |
 | --- | --- | --- |
-| HiveOS | [fear-miner-0.0.32.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-0.0.32.tar.gz) | [docs/en/hiveos.md](docs/en/hiveos.md) |
-| Linux | [fear-miner-linux-0.0.32.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-linux-0.0.32.tar.gz) | [docs/en/linux.md](docs/en/linux.md) |
-| Windows | [fear-miner-windows-0.0.32.zip](https://github.com/fearke85/fear-miner/releases/download/v0.0.32/fear-miner-windows-0.0.32.zip) | [docs/en/windows.md](docs/en/windows.md) |
+| HiveOS | [fear-miner-1.0.0.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.0.0/fear-miner-1.0.0.tar.gz) | [docs/en/hiveos.md](docs/en/hiveos.md) |
+| Linux | [fear-miner-linux-1.0.0.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.0.0/fear-miner-linux-1.0.0.tar.gz) | [docs/en/linux.md](docs/en/linux.md) |
+| Windows | [fear-miner-windows-1.0.0.zip](https://github.com/fearke85/fear-miner/releases/download/v1.0.0/fear-miner-windows-1.0.0.zip) | [docs/en/windows.md](docs/en/windows.md) |
 
-What changed: [release notes](https://github.com/fearke85/fear-miner/releases/tag/v0.0.32) ·
+What changed: [release notes](https://github.com/fearke85/fear-miner/releases/tag/v1.0.0) ·
 [CHANGELOG](CHANGELOG.md). Checksums are on the release page.
 
 ## Getting started

@@ -5,6 +5,17 @@ for one coin names it. Every change listed so far is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.0.0 (2026-10-12)
+
+Higher Keryx hashrate on NVIDIA RTX 20 and RTX 30 cards, with nothing to set. Estimated gain over
+0.0.32 by card family, at the same overclock:
+
+- RTX 20 series: about +4.5% (measured on an RTX 2070 Max-Q laptop at its power limit; desktop
+  cards that do not reach their power limit may gain less).
+- RTX 30 series: about +1% (measured: RTX 3060 +1.1 to +1.3%, RTX 3070 +1.0%, RTX 3080 +1.0%),
+  at the same or slightly better hashrate per watt.
+- RTX 50 series, RTX 40 series and CMP 170HX: unchanged.
+
 ## 0.0.32 (2026-10-11)
 
 - NVIDIA CMP 170HX now mines. Cards unlocked to 64 GB mine tier 4. Measured on two unlocked
