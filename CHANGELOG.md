@@ -5,6 +5,16 @@ for one coin names it. Every change listed so far is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.0.1 (2026-10-12)
+
+- RTX 20 series: back to the hashrate of 0.0.32, and memory overclock raises hashrate again.
+  1.0.0 lowered hashrate on desktop RTX 20 cards by up to ~13% (reported: RTX 2070 1.42 →
+  1.24 MH/s). Laptops at their power limit give back the ~4.5% that 1.0.0 gave them.
+- RTX 40 series: more hashrate, with nothing to set. Measured on an RTX 4090 at stock clocks
+  with a 410 W power limit: about **+2.8%** (3.54 → 3.64 MH/s), at about +2% hashrate per watt.
+  Other RTX 40 cards were not measured yet. Reports of the hashrate you see are welcome.
+- RTX 30, RTX 50 and CMP 170HX: unchanged from 1.0.0.
+
 ## 1.0.0 (2026-10-12)
 
 Higher Keryx hashrate on NVIDIA RTX 20 and RTX 30 cards, with nothing to set. Estimated gain over
