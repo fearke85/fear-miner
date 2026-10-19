@@ -1,7 +1,7 @@
 fear-miner is copyrighted software. The use terms are in the LICENSE file.
 Third-party components shipped in this package stay under their own licenses.
 
-llama.cpp and ggml (libkeryx-llama.so)
+llama.cpp and ggml (libkeryx-llama.so, libkeryx-llama-avx2.so)
   Copyright (c) the ggml authors
   License: MIT
   https://github.com/ggml-org/llama.cpp

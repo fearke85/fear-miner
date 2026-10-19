@@ -13,22 +13,24 @@ Mining Keryx with fear-miner. Algorithm: `keryxhash`.
 - NVIDIA Turing or newer (RTX 20xx, 30xx, 40xx, 50xx) with 8 GB or more.
 - NVIDIA CMP 170HX, including cards unlocked to 64 GB, which mine tier 4. Measured: ~3.2 MH/s per
   card at a 200 W power limit.
-- 6 GB cards mine tier 0 next to another card on the same rig, with 2 GB of RAM free at start.
+- Cards with 6 GB or less are not supported.
 - Pascal (GTX 10xx, P104/P106) and older are not supported.
 
 ## Which tier does my card mine?
 
-The miner picks the highest tier each card supports by itself. You do not need `--tier`.
+Each card mines the highest tier whose model fits in its memory with room left to answer that
+tier's AI requests. You do not need `--tier`.
 
-Free disk each tier needs for its model download:
+| Card memory | Tier | Free disk for the model |
+| --- | --- | --- |
+| 8 GB | 0 | ~6.7 GB |
+| 10-11 GB | 1 | ~8.5 GB |
+| 12-16 GB | 2 | ~10 GB |
+| 20-24 GB | 3 | ~17 GB |
+| 32 GB or more | 4 | ~30 GB |
 
-| Tier | Free disk |
-| --- | --- |
-| 0 | ~6.7 GB |
-| 1 | ~8.5 GB |
-| 2 | ~10 GB |
-| 3 | ~17 GB |
-| 4 | ~30 GB |
+With a monitor attached, what the desktop takes does not count, and a card near the edge may
+mine one tier lower.
 
 ## Settings
 
@@ -39,7 +41,7 @@ Install the package with your platform's guide, then use these values.
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.0.2/fear-miner-1.0.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.1.0/fear-miner-1.1.0.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORT` of your node |

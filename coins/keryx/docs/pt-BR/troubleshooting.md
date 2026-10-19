@@ -16,8 +16,7 @@ mais novo.
 
 A mensagem lista a memória de cada placa e o que o menor tier precisa.
 
-- Placas com menos de 8 GB precisam de outra placa na rig que responda o tier 0, e de 2 GB de RAM
-  livre.
+- Placas com menos de 8 GB não são suportadas.
 - Pascal (GTX 10xx, P104/P106) e anteriores não são suportadas.
 - No Linux ou no Windows, o monitor e os programas abertos ocupam memória da placa. Feche-os, ou
   use uma rig sem monitor com `--headless`.
@@ -43,6 +42,4 @@ pedidos de IA, e as outras placas respondem por ela. O relatório de crash no `l
 
 ## Hashrate baixo numa placa
 
-- Uma placa num link PCIe estreito (riser x1) que minera um tier maior que a memória dela chega ao
-  hashrate cerca de dois minutos depois da partida. Um link mais rápido dá mais hashrate.
 - Compare com outras placas do mesmo modelo no [Discord](https://discord.gg/uK93NPAhbd).

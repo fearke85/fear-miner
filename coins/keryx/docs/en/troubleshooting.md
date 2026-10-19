@@ -15,7 +15,7 @@ Versions before 0.0.22 are invalid since the H14 hard fork. Install the
 
 The message lists each card's memory and what the smallest tier needs.
 
-- Cards under 8 GB need another card on the rig that can answer tier 0, and 2 GB of free RAM.
+- Cards under 8 GB are not supported.
 - Pascal (GTX 10xx, P104/P106) and older are not supported.
 - On Linux or Windows, a monitor and open programs take card memory. Close them, or use a rig
   with no monitor and `--headless`.
@@ -40,6 +40,4 @@ while, and the other cards answer them. The crash report in `log.txt` names the 
 
 ## Low hashrate on a card
 
-- A card on a narrow PCIe link (x1 riser) that mines a tier larger than its memory reaches its
-  hashrate about two minutes after start. A faster link gives it more hashrate.
 - Compare with other cards of the same model on [Discord](https://discord.gg/uK93NPAhbd).

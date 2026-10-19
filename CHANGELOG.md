@@ -5,6 +5,46 @@ for one coin names it. Every change listed so far is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.1.0 (2026-10-19)
+
+Keryx AI requests are answered by cards that keep mining their tier, with nothing to set.
+
+- **Faster answers.** The card that answers a request is ready in under half a second and back to
+  mining about a second after the answer. Before, it loaded the model first (~15 s on tier 2)
+  and needed ~9 s more before it mined again. Hashrate is the same as 1.0.3.
+- **Long prompts read whole.** Every tier reads up to 32,768 tokens of a prompt (4,096 before).
+- **New tier ladder:**
+
+  | Tier | Card memory |
+  | --- | --- |
+  | 0 | 8 GB |
+  | 1 | 10-11 GB |
+  | 2 | 12-16 GB |
+  | 3 | 20-24 GB |
+  | 4 | 32 GB or more |
+
+- **`--tier` above a card's size:** the card mines the forced tier when that tier's model fits in
+  its memory; otherwise it mines the tier its memory holds. The log says which tier each card
+  mines.
+- **Cards with 6 GB or less are not supported.**
+- **Fixed, low-end rigs (Celeron, 4 GB of RAM, USB stick):** HiveOS rebooted them for a high load
+  average a few minutes after every start, even with its watchdog off. Measured on a rig limited
+  to 2 cores, 4 GB and a USB stick's speed: load average 180 and a reboot before, at most 4 now,
+  with every share accepted.
+- **Fixed, solo:** a rig whose node stopped answering could stay at 0 H/s for good. It now
+  reconnects.
+- **Fixed, solo:** a block found around the dev-fee minute could be dropped as "template gone".
+- **Fixed, pool:** right after the dev-fee minute, a few shares could show as stale or rejected
+  that were not the rig's own.
+- **Windows:** the miner warns at start when the paging file is too small for the memory the cards
+  use, and says how much to add. Its RAM use after the cards load dropped from about 18 GB to
+  about 2 GB (measured on a rig with an RTX 5070 Ti and an RTX 3060).
+
+## 1.0.3 (2026-10-15)
+
+Keryx: a fix for cards that could stop with an out-of-memory error while loading, most often
+right after a reboot, and then did not mine. Hashrate unchanged.
+
 ## 1.0.2 (2026-10-13)
 
 More Keryx hashrate on RTX 30, RTX 40 and RTX 50 cards, with nothing to set.
@@ -45,9 +85,6 @@ Higher Keryx hashrate on NVIDIA RTX 20 and RTX 30 cards, with nothing to set. Es
 
 ## 0.0.31 (2026-10-09)
 
-- Cards on narrow PCIe links that mine a tier larger than their memory get much faster, with
-  nothing to set. They settle about two minutes after start. Measured: RTX 5070 Ti on a 3.0 x1
-  riser ~120 → 419 kH/s, RTX 3070 on 3.0 x1 117 → 346 kH/s, RTX 5070 Ti on 3.0 x4 ~490 → 876 kH/s.
 - Fewer strikes after a crash. An AI request the rig still owed when the miner restarted is
   answered after the restart while its window is open.
 - A card that crashes the miner while answering AI requests keeps mining but is kept off AI
@@ -60,8 +97,6 @@ Higher Keryx hashrate on NVIDIA RTX 20 and RTX 30 cards, with nothing to set. Es
 
 ## 0.0.30 (2026-10-09)
 
-- Higher hashrate on narrow risers for cards just short of their tier's memory. A card that was a
-  little short now mines its tier at full speed.
 - Linux and Windows get 0.0.29's change.
 
 ## 0.0.29 (2026-10-09, HiveOS only)
@@ -72,25 +107,20 @@ Higher Keryx hashrate on NVIDIA RTX 20 and RTX 30 cards, with nothing to set. Es
 
 ## 0.0.28 (2026-10-08)
 
-- A card that mines a tier larger than its memory now needs another card, or two together, that
-  can answer that tier's AI requests. Without one, the card does not mine that tier, and the log
-  and TUI say why. This avoids strikes for requests the rig could not answer.
+- Hashrate unchanged.
 
 ## 0.0.27 (2026-10-08)
 
-- Choose which cards mine with `--device`, by the numbers the miner shows: `--device 1,6 -- --tier
-  3,3` in HiveOS Extra config, `DEVICES=` in `run.sh` and `start.bat`.
+- Choose which cards mine with `--device`, by the numbers the miner shows: `--device 1,6` in
+  HiveOS Extra config, `DEVICES=` in `run.sh` and `start.bat`.
 
 ## 0.0.26 (2026-10-08)
 
-- Windows: cards that mine a tier larger than their memory now use all of it. Measured on an
-  RTX 5070 Ti, tier 3: 95% → 97.8% of the model on the card.
 - The miner version shows in the TUI header and on every log line.
 
 ## 0.0.25 (2026-10-08)
 
-- Cards that mine a tier larger than their memory are faster on every PCIe link and use less RAM.
-  Measured on two RTX 5070 Ti, tier 3: PCIe 5.0 x4 1.63 → 2.68 MH/s.
+- Hashrate unchanged.
 
 ## 0.0.24 (2026-10-08)
 
@@ -99,9 +129,7 @@ Higher Keryx hashrate on NVIDIA RTX 20 and RTX 30 cards, with nothing to set. Es
 
 ## 0.0.23 (2026-10-08)
 
-- 6 GB cards mine tier 0. Have 2 GB of RAM free at start. A faster PCIe link gives more hashrate.
-- `--tier 1` (every card) or `--tier 2,0,2` (per card) forces a higher tier. A card forced above
-  its memory mines instead of failing.
+- `--tier 1` (every card) or `--tier 2,0,2` (per card) forces a tier.
 
 ## 0.0.22 (2026-10-08)
 
