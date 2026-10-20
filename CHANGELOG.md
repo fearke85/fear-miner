@@ -5,6 +5,22 @@ for one coin names it. Every change listed so far is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.2.1 (2026-10-20)
+
+Fixes for 1.2.0.
+
+- **Fixed, Linux with `sudo`:** the overclock flags need root, and a miner started with `sudo`
+  left `keryx`, the escrow folder and `log.txt` owned by root, so you could not change them.
+  What the miner creates now belongs to whoever owns the miner folder, and the next start with
+  `sudo` hands back what an earlier one left as root. HiveOS is unchanged.
+- **Fixed, solo:** a busy node that takes several seconds to check each block ended the
+  connection after 10 s (`the node stopped reading the stream`), and a block found meanwhile
+  could be dropped as `template gone`. The miner now waits for a slow node.
+- **Fixed, Windows:** the pool ping and the share round trip show again instead of `rtt ?`.
+- **Fixed:** the fan showed 0% on cards whose first fan reports no speed (seen on an RTX 3070).
+  It now shows the fastest fan of the card.
+- A harmless tokenizer warning when tier 1 loads no longer shows in the log.
+
 ## 1.2.0 (2026-10-19)
 
 Overclock from the miner, shorter start lines, and two Windows fixes.
