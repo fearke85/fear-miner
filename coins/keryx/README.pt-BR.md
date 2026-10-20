@@ -42,7 +42,7 @@ Instale o pacote pelo guia da sua plataforma e use estes valores.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.1.0/fear-miner-1.1.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.2.0/fear-miner-1.2.0.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORTA` do seu node |
@@ -50,15 +50,18 @@ Instale o pacote pelo guia da sua plataforma e use estes valores.
 
 A carteira é o seu endereço Keryx, `keryx:...`. Guia de instalação: [HiveOS](../../docs/pt-BR/hiveos.md).
 
-### run.sh (Linux) e start.bat (Windows)
+### start-keryx.sh (Linux) e start-keryx.bat (Windows)
 
-| Linha | Valor |
+A linha da pool já vem preenchida. Coloque o seu endereço em `-wallet`. Para solo, comente a
+linha da pool e tire o comentário da linha solo.
+
+| O quê | Valor |
 | --- | --- |
-| `WALLET` | Seu endereço Keryx, `keryx:...` |
-| `WORKER` | Um nome para esta rig na pool |
-| `POOL` | `stratum+tcp://krx.suprnova.cc:4404` |
-| `NODE` | Só solo: `grpc://IP:PORTA` do seu node, com `POOL` vazio |
-| `ESCROW_CERT` | Só solo, primeira execução: veja [mineração solo](docs/pt-BR/solo.md) |
+| `-wallet` | Seu endereço Keryx, `keryx:...` |
+| `-worker` | Um nome para esta rig na pool |
+| `-pool` | `krx.suprnova.cc:4404` |
+| `-node` | Só solo: `grpc://IP:PORTA` do seu node |
+| `--escrow-cert` | Só solo, primeira execução: veja [mineração solo](docs/pt-BR/solo.md) |
 
 Guias de instalação: [Linux](../../docs/pt-BR/linux.md) · [Windows](../../docs/pt-BR/windows.md).
 

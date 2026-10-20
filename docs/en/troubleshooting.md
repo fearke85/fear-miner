@@ -34,6 +34,9 @@ power, PCIe link, the GPU errors the system logged, and the likeliest cause. The
 a lower memory or core overclock on that card. Juliano Caju's
 [overclock table](https://www.julianocaju.com.br/en/overclocks/) lists settings per card and coin.
 
+On Windows, `start-keryx.bat` starts the miner again after such a crash. A `start-keryx.bat` from
+an older release stops at `Press any key to continue` instead: copy your line into the new one.
+
 ## Asking for help
 
 Ask on [Discord](https://discord.gg/uK93NPAhbd) or

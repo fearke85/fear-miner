@@ -5,6 +5,30 @@ for one coin names it. Every change listed so far is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.2.0 (2026-10-19)
+
+Overclock from the miner, shorter start lines, and two Windows fixes.
+
+- **Overclock from the miner,** on Linux and Windows: `-cclock` and `-mclock` (core and memory
+  offsets in MHz, negative lowers them), `-lock-cclock` and `-lock-mclock` (locked clocks in MHz)
+  and `-fan` (percent). One value sets every card. Different cards take a list, one value per card
+  in `-device` order, and `*` leaves a card as it is:
+  `-device 0,1 -cclock 275,250 -lock-cclock 2610,1350 -fan 75`. Linux needs root, Windows **Run as
+  administrator**. On exit the miner puts back what it changed. On HiveOS, use these flags or the
+  OC page for a card, not both.
+- **Miner flags take one hyphen:** `-coin keryxhash`, `-pool`, `-wallet`, `-worker`, `-device`.
+  Coin flags keep two (`--tier`). Older lines with `--pool` or a bare `--` still work.
+- **One start line per coin:** `start-keryx.sh` and `start-keryx.bat` hold a pool line and a
+  commented solo line. Linux and Windows keep their data in `keryx` next to the miner
+  (`FEAR_DATA_DIR` moves it); an older `data` folder is picked up from there.
+- **Solo, escrow per wallet:** escrow files now sit under `escrow/<wallet>/` (HiveOS:
+  `/var/lib/fear-miner/escrow/<wallet>/`). The first start copies them there and keeps the old
+  files, renamed `*.pre-layout`. A second wallet on the same rig gets its own escrow.
+- **Fixed, Windows:** an 8 GB card that also drives a monitor (RTX 3070) did not mine. It now
+  mines tier 0.
+- **Fixed, Windows:** after a card crash the miner starts again by itself instead of stopping at
+  `Press any key`. It needs the new `start-keryx.bat`: copy your line into it.
+
 ## 1.1.0 (2026-10-19)
 
 Keryx AI requests are answered by cards that keep mining their tier, with nothing to set.

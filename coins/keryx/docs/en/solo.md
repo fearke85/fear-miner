@@ -15,8 +15,8 @@ Solo mining sends blocks to your own Keryx node instead of a pool.
 | Platform | Setting |
 | --- | --- |
 | HiveOS | Pool URL `grpc://IP:PORT`, wallet template `%WAL%` |
-| Linux | `NODE="grpc://IP:PORT"` and `POOL=""` in `run.sh` |
-| Windows | `set "NODE=grpc://IP:PORT"` and `set "POOL="` in `start.bat` |
+| Linux | Uncomment the solo line in `start-keryx.sh` and set `-node grpc://IP:PORT` |
+| Windows | Uncomment the solo line in `start-keryx.bat` and set `-node grpc://IP:PORT` |
 
 Example: `grpc://192.168.1.20:22110`. Use `grpc://`, not `http://` and not a bare `IP:PORT`.
 
@@ -27,8 +27,8 @@ Example: `grpc://192.168.1.20:22110`. Use `grpc://`, not `http://` and not a bar
    128 hex characters: the escrow cert.
 3. Give the cert to the miner and start it again:
    - HiveOS, Extra config arguments: `-- --escrow-cert PASTE_THE_128_HEX_CHARS`
-   - Linux: `ESCROW_CERT="..."` in `run.sh`
-   - Windows: `set "ESCROW_CERT=..."` in `start.bat`
+   - Linux: add `--escrow-cert ...` on the solo line in `start-keryx.sh`
+   - Windows: add `--escrow-cert ...` on the solo line in `start-keryx.bat`
 
 That start saves the cert. Later starts load it, so you can remove it from the settings.
 
@@ -37,8 +37,11 @@ authorise the rig again. Keep the escrow files when you reinstall or move the mi
 
 | Platform | Escrow files |
 | --- | --- |
-| HiveOS | `/var/lib/fear-miner` |
-| Linux, Windows | `data` next to the miner |
+| HiveOS | `/var/lib/fear-miner/escrow/<wallet>/` |
+| Linux, Windows | `keryx/escrow/<wallet>/` next to the miner |
+
+`<wallet>` is the payout address, with `:` written as `_`. An update copies an existing flat
+escrow into that folder and keeps the old files beside it, with a `.pre-layout` suffix.
 
 ## AI requests and strikes
 
@@ -53,4 +56,4 @@ least one of them.
 ## Pool rigs and escrow
 
 A pool rig can claim its matured escrow through a node while it keeps mining on the pool: add
-`-- --escrow-claim grpc://IP:PORT` (HiveOS) or `--escrow-claim grpc://IP:PORT` in `EXTRA`.
+`-- --escrow-claim grpc://IP:PORT` (HiveOS) or `--escrow-claim grpc://IP:PORT` on the pool line.

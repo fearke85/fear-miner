@@ -36,6 +36,10 @@ correção mais comum é baixar o overclock de memória ou de core dessa placa. 
 [tabela de overclocks](https://www.julianocaju.com.br/overclocks/) do Juliano Caju traz valores por
 placa e moeda.
 
+No Windows, o `start-keryx.bat` inicia o miner de novo depois de um crash desses. Um
+`start-keryx.bat` de uma versão antiga para em `Pressione qualquer tecla para continuar`: copie a sua
+linha para o novo.
+
 ## Pedir ajuda
 
 Pergunte no [Discord](https://discord.gg/uK93NPAhbd) ou

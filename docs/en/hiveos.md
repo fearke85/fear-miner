@@ -18,7 +18,7 @@ Create a flight sheet with miner **Custom**:
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.1.0/fear-miner-1.1.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.2.0/fear-miner-1.2.0.tar.gz` |
 | Hash algorithm | from your coin's page |
 | Wallet and worker template | from your coin's page |
 | Pool URL | from your coin's page |
@@ -33,32 +33,35 @@ Apply the flight sheet. The dashboard shows the hashrate once the cards are mini
 ## Install from the rig console
 
 ```
-/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.1.0/fear-miner-1.1.0.tar.gz
+/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.2.0/fear-miner-1.2.0.tar.gz
 ```
 
 Add `-f` to reinstall.
 
 ## Update to a new version
 
-Change the version in the Installation URL, twice: in `v1.1.0` and in
-`fear-miner-1.1.0.tar.gz`. The rest of the flight sheet stays. Keeping the old URL keeps
+Change the version in the Installation URL, twice: in `v1.2.0` and in
+`fear-miner-1.2.0.tar.gz`. The rest of the flight sheet stays. Keeping the old URL keeps
 installing the old version.
 
 Everything the miner keeps (models, keys, the log) stays in `/var/lib/fear-miner` across updates
-and reinstalls.
+and reinstalls. Escrow files for each wallet are in `escrow/<wallet>/` there. Models stay in
+`models/`, or wherever `--models-dir` points.
 
 ## Extra config arguments
 
-Miner options go before `--`, coin options after it:
+Miner flags take one hyphen. Coin flags take two. Hash algorithm on the flight sheet is the
+coin (`-coin`). A bare `--` from an older sheet is still accepted.
 
 ```
---device 0,2 --stats 0.0.0.0:4060 -- <coin options>
+-device 0,2 -stats 0.0.0.0:4060 --tier 2
 ```
 
 | What | Extra config arguments |
 | --- | --- |
-| Mine on cards 0 and 2 only | `--device 0,2` |
-| Open the stats API to your LAN | `--stats 0.0.0.0:4060` |
+| Mine on cards 0 and 2 only | `-device 0,2` |
+| Open the stats API to your LAN | `-stats 0.0.0.0:4060` |
+| Mine a different coin than the flight sheet | `-coin vela` |
 
 The package already runs headless. Miner options: [options.md](options.md). Coin options: your
 coin's page ([Keryx](../../coins/keryx/docs/en/options.md)).
