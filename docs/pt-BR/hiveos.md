@@ -19,7 +19,7 @@ Crie um flight sheet com o miner **Custom**:
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-1.3.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.1/fear-miner-1.3.1.tar.gz` |
 | Hash algorithm | da página da sua moeda |
 | Wallet and worker template | da página da sua moeda |
 | Pool URL | da página da sua moeda |
@@ -34,15 +34,15 @@ Aplique o flight sheet. O painel mostra o hashrate quando as placas começam a m
 ## Instalar pelo console da rig
 
 ```
-/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-1.3.0.tar.gz
+/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.3.1/fear-miner-1.3.1.tar.gz
 ```
 
 Adicione `-f` para reinstalar.
 
 ## Atualizar para uma versão nova
 
-Troque a versão na Installation URL, nos dois lugares: em `v1.3.0` e em
-`fear-miner-1.3.0.tar.gz`. O resto do flight sheet continua igual. Com a URL antiga, a rig
+Troque a versão na Installation URL, nos dois lugares: em `v1.3.1` e em
+`fear-miner-1.3.1.tar.gz`. O resto do flight sheet continua igual. Com a URL antiga, a rig
 continua instalando a versão antiga.
 
 Tudo o que o miner guarda (modelos, chaves, o log) fica em `/var/lib/fear-miner` entre
@@ -78,6 +78,8 @@ página dela ([Keryx](../../coins/keryx/docs/pt-BR/options.md), [Vela](../../coi
 
 ## Uso de CPU em rigs com poucos núcleos
 
-Numa rig com muitas GPUs e CPU fraca, defina `FEAR_SYNC=block` no ambiente do flight sheet para
-usar menos CPU, com cerca de 0,1% a menos de hashrate. `FEAR_SYNC=spin` usa um núcleo inteiro por
-GPU.
+Keryx: numa rig com muitas GPUs e CPU fraca, defina `FEAR_SYNC=block` no ambiente do flight sheet
+para usar menos CPU, com cerca de 0,1% a menos de hashrate. `FEAR_SYNC=spin` usa um núcleo inteiro
+por GPU.
+
+O Vela deixa a CPU livre enquanto as placas trabalham e não lê `FEAR_SYNC`.

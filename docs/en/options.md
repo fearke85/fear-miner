@@ -82,8 +82,8 @@ miner shows: 0, 1, 2…
 | Variable | What it does |
 | --- | --- |
 | `FEAR_DATA_DIR` | Linux and Windows: folder for the data the miner keeps. Default `keryx` (Vela: `vela`) next to the miner |
-| `FEAR_SYNC=block` | Lower CPU use on rigs with many GPUs and few cores, for about 0.1% less hashrate |
-| `FEAR_SYNC=spin` | One full CPU core per GPU |
+| `FEAR_SYNC=block` | Keryx: lower CPU use on rigs with many GPUs and few cores, for about 0.1% less hashrate |
+| `FEAR_SYNC=spin` | Keryx: one full CPU core per GPU. Vela does not read `FEAR_SYNC` |
 
 ## Examples
 

@@ -48,7 +48,7 @@ Install the package with your platform's guide, then use these values.
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-1.3.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.1/fear-miner-1.3.1.tar.gz` |
 | Hash algorithm | Any one from the list (see below) |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `stratum+tcp://vela.suprnova.cc:7601` |

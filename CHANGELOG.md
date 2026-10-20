@@ -5,6 +5,17 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.3.1 (2026-10-20)
+
+A fix for Vela in 1.3.0.
+
+- **Fixed, Vela:** the miner kept one CPU core busy for each card, two on most cards, all the time.
+  The CPU now stays idle while the cards work, at the same inf/s. Measured on a 7-card HiveOS
+  rig: the load average went from 14.8 to 0.4 and the miner from 14 cores to 15% of one, at
+  225 inf/s before and after. Rigs with a small CPU, and HiveOS's load average watchdog, no
+  longer see Vela as a CPU load.
+- `FEAR_SYNC` is a Keryx setting; Vela does not read it.
+
 ## 1.3.0 (2026-10-20)
 
 A second coin, Vela, and a fix for 1.2.1.

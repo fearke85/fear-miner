@@ -84,8 +84,8 @@ placa que o miner mostra: 0, 1, 2…
 | Variável | O que faz |
 | --- | --- |
 | `FEAR_DATA_DIR` | Linux e Windows: pasta dos dados que o miner guarda. Padrão `keryx` (Vela: `vela`) ao lado do miner |
-| `FEAR_SYNC=block` | Menos uso de CPU em rigs com muitas GPUs e poucos núcleos, com cerca de 0,1% a menos de hashrate |
-| `FEAR_SYNC=spin` | Um núcleo inteiro de CPU por GPU |
+| `FEAR_SYNC=block` | Keryx: menos uso de CPU em rigs com muitas GPUs e poucos núcleos, com cerca de 0,1% a menos de hashrate |
+| `FEAR_SYNC=spin` | Keryx: um núcleo inteiro de CPU por GPU. O Vela não lê `FEAR_SYNC` |
 
 ## Exemplos
 
