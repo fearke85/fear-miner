@@ -37,6 +37,17 @@ a lower memory or core overclock on that card. Juliano Caju's
 On Windows, `start-keryx.bat` starts the miner again after such a crash. A `start-keryx.bat` from
 an older release stops at `Press any key to continue` instead: copy your line into the new one.
 
+## "Permission denied" on the miner's files or folders
+
+- **Linux, files owned by root:** a miner started with `sudo` before 1.2.1 left `keryx`, the escrow
+  folder and `log.txt` owned by root. Start this version once with `sudo` from your own login: it
+  gives them back to the owner of the miner folder. A systemd service or a root login keeps root's
+  files; run `sudo chown -R "$USER": .` in the miner folder. More in
+  [Linux, with sudo](linux.md#with-sudo).
+- **HiveOS or another root run, `Failed to create escrow key directory ... Permission denied`:**
+  1.2.1 stopped like this when the miner folder belonged to a regular user. Fixed in 1.3.0:
+  update the miner.
+
 ## Asking for help
 
 Ask on [Discord](https://discord.gg/uK93NPAhbd) or

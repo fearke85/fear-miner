@@ -40,6 +40,17 @@ No Windows, o `start-keryx.bat` inicia o miner de novo depois de um crash desses
 `start-keryx.bat` de uma versão antiga para em `Pressione qualquer tecla para continuar`: copie a sua
 linha para o novo.
 
+## "Permission denied" nos arquivos ou pastas do miner
+
+- **Linux, arquivos com dono root:** um miner iniciado com `sudo` antes da 1.2.1 deixou `keryx`, a
+  pasta de escrow e o `log.txt` com dono root. Inicie esta versão uma vez com `sudo` a partir do
+  seu próprio login: ela devolve tudo ao dono da pasta do miner. Um serviço do systemd ou um login
+  de root mantém os arquivos como root; rode `sudo chown -R "$USER": .` na pasta do miner. Mais em
+  [Linux, com sudo](linux.md#com-sudo).
+- **HiveOS ou outra execução como root, `Failed to create escrow key directory ... Permission
+  denied`:** a 1.2.1 parava assim quando a pasta do miner pertencia a um usuário comum. Corrigido
+  na 1.3.0: atualize o miner.
+
 ## Pedir ajuda
 
 Pergunte no [Discord](https://discord.gg/uK93NPAhbd) ou

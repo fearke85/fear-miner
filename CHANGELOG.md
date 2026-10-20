@@ -1,9 +1,27 @@
 # Changelog
 
 What changed in each version, newest first. One version of fear-miner covers every coin; a change
-for one coin names it. Every change listed so far is for Keryx.
+for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
+
+## 1.3.0 (2026-10-20)
+
+A second coin, Vela, and a fix for 1.2.1.
+
+- **New coin, Vela** (`-coin vela`; on HiveOS any Hash algorithm and `-coin vela` in Extra config
+  arguments, since HiveOS does not list Vela), on the suprnova pool `vela.suprnova.cc:7601`, on
+  NVIDIA Turing or newer. The model (1.2 GB) downloads on the first start. Measured at a HiveOS
+  overclock: RTX 3060 13.6 inf/s at 78 W, 3070 20.9 at 123 W, 3080 27.6 at 190 W, 5070 Ti 57.8
+  at 211 W. The overclock per card, settings and options: [coins/vela](coins/vela/README.md).
+- Vela's speed shows in inferences per second (`inf/s`) and its efficiency in `inf/J` in the
+  miner's screen and in `/stats`. HiveOS shows the same number as H/s.
+- The Linux and Windows packages carry `start-vela.sh` and `start-vela.bat`.
+- The Linux package carries one library, `fear-miner-lib.so`; `libgomp.so.1` is gone.
+- **Fixed, Linux and HiveOS:** in 1.2.1 a miner run as root (HiveOS, a service, a root login)
+  from a folder a regular user owns could not create its escrow key (`Failed to create escrow
+  key directory ... Permission denied`). Files now go to the folder's owner only when that user
+  started the miner with `sudo` or `su`; other root runs keep root's files.
 
 ## 1.2.1 (2026-10-20)
 

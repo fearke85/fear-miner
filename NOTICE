@@ -1,12 +1,13 @@
 fear-miner is copyrighted software. The use terms are in the LICENSE file.
 Third-party components shipped in this package stay under their own licenses.
 
-llama.cpp and ggml (libkeryx-llama.so, libkeryx-llama-avx2.so)
+llama.cpp and ggml (in fear-miner-lib)
   Copyright (c) the ggml authors
   License: MIT
   https://github.com/ggml-org/llama.cpp
 
-NVIDIA CUDA runtime libraries (libcudart, libcublas, libcublasLt, and libnvJitLink when linked)
+NVIDIA CUDA runtime libraries (cudart, cuBLAS, cuBLASLt and nvJitLink, in fear-miner-lib
+or beside it)
   Copyright (c) NVIDIA Corporation
   Redistributed as the CUDA runtime needed to execute this miner.
   Subject to the NVIDIA Software License Agreement for the CUDA Toolkit:

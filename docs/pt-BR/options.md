@@ -3,15 +3,15 @@
 [English](../en/options.md) · **Português (Brasil)** · [Voltar ao README](../../README.pt-BR.md)
 
 Opções que funcionam igual para todas as moedas. As opções de cada moeda estão na página dela:
-[Keryx](../../coins/keryx/docs/pt-BR/options.md).
+[Keryx](../../coins/keryx/docs/pt-BR/options.md), [Vela](../../coins/vela/README.pt-BR.md#opções-do-vela).
 
 ## Onde colocar as opções
 
 | Plataforma | Onde |
 | --- | --- |
 | HiveOS | Flight sheet, **Extra config arguments** |
-| Linux | Na linha do `start-keryx.sh` |
-| Windows | Na linha do `start-keryx.bat` |
+| Linux | Na linha do `start-<moeda>.sh` da moeda |
+| Windows | Na linha do `start-<moeda>.bat` da moeda |
 
 Flags do miner levam um hífen. Flags da moeda levam dois. A ordem não importa: tudo fica na
 mesma linha. Um `--` solto de uma linha antiga ainda é aceito e ignorado.
@@ -27,7 +27,7 @@ Caminhos são uma palavra só, sem aspas.
 
 | Opção | O que faz | Padrão |
 | --- | --- | --- |
-| `-coin keryxhash` | Moeda a minerar. Igual ao positional `keryxhash`; os dois juntos, vale `-coin` | obrigatório |
+| `-coin keryxhash` | Moeda a minerar: `keryxhash` ou `vela`. Igual ao positional `keryxhash`; os dois juntos, vale `-coin` | obrigatório |
 | `-device 0,2,5` | Minera só nessas placas, pelos números que o miner mostra | `all` |
 | `-pool host:porta` | Pool onde minerar | definido pelo lançador |
 | `-node grpc://IP:PORTA` | Seu node, para minerar solo | definido pelo lançador |
@@ -71,8 +71,8 @@ placa que o miner mostra: 0, 1, 2…
 - Uma lista com a quantidade errada de valores não muda nada em nenhuma placa, e o log avisa.
   Se uma placa cair do barramento, os números mudam; aí o miner minera no stock em vez de
   colocar o clock de uma placa em outra.
-- No Linux precisa de root e no Windows de **Executar como administrador**. O HiveOS já roda o
-  miner como root.
+- No Linux precisa de root ([com sudo](linux.md#com-sudo)) e no Windows de **Executar como
+  administrador**. O HiveOS já roda o miner como root.
 - Ao sair (Ctrl+C, ou fechando a tela), o miner desfaz o que mudou: offsets 0, clocks
   destravados, ventoinhas no automático. Se o processo for morto, os ajustes ficam até o
   próximo start.
@@ -83,13 +83,13 @@ placa que o miner mostra: 0, 1, 2…
 
 | Variável | O que faz |
 | --- | --- |
-| `FEAR_DATA_DIR` | Linux e Windows: pasta dos dados que o miner guarda. Padrão `keryx` ao lado do miner |
+| `FEAR_DATA_DIR` | Linux e Windows: pasta dos dados que o miner guarda. Padrão `keryx` (Vela: `vela`) ao lado do miner |
 | `FEAR_SYNC=block` | Menos uso de CPU em rigs com muitas GPUs e poucos núcleos, com cerca de 0,1% a menos de hashrate |
 | `FEAR_SYNC=spin` | Um núcleo inteiro de CPU por GPU |
 
 ## Exemplos
 
-| Objetivo | Extra config no HiveOS | `start-keryx.sh` / `start-keryx.bat` |
+| Objetivo | Extra config no HiveOS | `start-<moeda>.sh` / `start-<moeda>.bat` |
 | --- | --- | --- |
 | Só as placas 0 e 1 | `-device 0,1` | `-device 0,1` na linha de start |
 | Stats na rede local | `-stats 0.0.0.0:4060` | `-stats 0.0.0.0:4060` na linha de start |

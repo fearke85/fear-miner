@@ -3,7 +3,8 @@
 [English](../en/hiveos.md) · **Português (Brasil)** · [Voltar ao README](../../README.pt-BR.md)
 
 Como instalar o fear-miner no HiveOS, para qualquer moeda. Os valores da sua moeda (algoritmo,
-template da carteira, Pool URL) estão na página dela: [Keryx](../../coins/keryx/README.pt-BR.md#flight-sheet-do-hiveos).
+template da carteira, Pool URL) estão na página dela: [Keryx](../../coins/keryx/README.pt-BR.md#flight-sheet-do-hiveos),
+[Vela](../../coins/vela/README.pt-BR.md#flight-sheet-na-hiveos).
 
 ## Antes de começar
 
@@ -18,7 +19,7 @@ Crie um flight sheet com o miner **Custom**:
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.2.1/fear-miner-1.2.1.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-1.3.0.tar.gz` |
 | Hash algorithm | da página da sua moeda |
 | Wallet and worker template | da página da sua moeda |
 | Pool URL | da página da sua moeda |
@@ -33,15 +34,15 @@ Aplique o flight sheet. O painel mostra o hashrate quando as placas começam a m
 ## Instalar pelo console da rig
 
 ```
-/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.2.1/fear-miner-1.2.1.tar.gz
+/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-1.3.0.tar.gz
 ```
 
 Adicione `-f` para reinstalar.
 
 ## Atualizar para uma versão nova
 
-Troque a versão na Installation URL, nos dois lugares: em `v1.2.1` e em
-`fear-miner-1.2.1.tar.gz`. O resto do flight sheet continua igual. Com a URL antiga, a rig
+Troque a versão na Installation URL, nos dois lugares: em `v1.3.0` e em
+`fear-miner-1.3.0.tar.gz`. O resto do flight sheet continua igual. Com a URL antiga, a rig
 continua instalando a versão antiga.
 
 Tudo o que o miner guarda (modelos, chaves, o log) fica em `/var/lib/fear-miner` entre
@@ -51,7 +52,8 @@ lá. Os modelos ficam em `models/`, ou no caminho de `--models-dir`.
 ## Extra config arguments
 
 Flags do miner levam um hífen. Flags da moeda levam dois. O Hash algorithm do flight sheet é a
-moeda (`-coin`). Um `--` solto de uma ficha antiga ainda é aceito.
+moeda (`-coin`); um `-coin` em Extra config arguments substitui ele, para uma moeda que a HiveOS
+não lista (Vela). Um `--` solto de uma ficha antiga ainda é aceito.
 
 ```
 -device 0,2 -stats 0.0.0.0:4060 --tier 2
@@ -61,10 +63,10 @@ moeda (`-coin`). Um `--` solto de uma ficha antiga ainda é aceito.
 | --- | --- |
 | Minerar só nas placas 0 e 2 | `-device 0,2` |
 | Abrir a API de stats para a rede local | `-stats 0.0.0.0:4060` |
-| Minerar outra moeda que a do flight sheet | `-coin vela` |
+| Minerar Vela, que não está na lista de Hash algorithm da HiveOS | `-coin vela` |
 
 O pacote já roda em modo headless. Opções do miner: [options.md](options.md). Opções da moeda: a
-página dela ([Keryx](../../coins/keryx/docs/pt-BR/options.md)).
+página dela ([Keryx](../../coins/keryx/docs/pt-BR/options.md), [Vela](../../coins/vela/README.pt-BR.md#opções-do-vela)).
 
 ## Onde fica cada coisa
 

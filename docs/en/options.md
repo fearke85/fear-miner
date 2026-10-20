@@ -3,15 +3,15 @@
 **English** · [Português (Brasil)](../pt-BR/options.md) · [Back to README](../../README.md)
 
 Options that work the same for every coin. Coin options are on each coin's page:
-[Keryx](../../coins/keryx/docs/en/options.md).
+[Keryx](../../coins/keryx/docs/en/options.md), [Vela](../../coins/vela/README.md#vela-options).
 
 ## Where options go
 
 | Platform | Where |
 | --- | --- |
 | HiveOS | Flight sheet, **Extra config arguments** |
-| Linux | On the line in `start-keryx.sh` |
-| Windows | On the line in `start-keryx.bat` |
+| Linux | On the line in the coin's `start-<coin>.sh` |
+| Windows | On the line in the coin's `start-<coin>.bat` |
 
 Miner flags take one hyphen. Coin flags take two. They can sit in any order, on the same line.
 A bare `--` from an older command line is still accepted and ignored.
@@ -27,7 +27,7 @@ Paths are one word, with no quotes.
 
 | Option | What it does | Default |
 | --- | --- | --- |
-| `-coin keryxhash` | Coin to mine. Same as a positional `keryxhash`; when both are set, `-coin` wins | required |
+| `-coin keryxhash` | Coin to mine: `keryxhash` or `vela`. Same as a positional `keryxhash`; when both are set, `-coin` wins | required |
 | `-device 0,2,5` | Mine on these cards only, by the numbers the miner shows | `all` |
 | `-pool host:port` | Pool to mine on | set by the launcher |
 | `-node grpc://IP:PORT` | Your node, for solo mining | set by the launcher |
@@ -70,8 +70,8 @@ miner shows: 0, 1, 2…
 - A list with the wrong number of values changes nothing on any card, and the log says so. If
   a card drops off the bus, the numbers shift; the miner then mines at stock instead of putting
   one card's clocks on another.
-- Linux needs root and Windows needs **Run as administrator**. HiveOS already runs the miner as
-  root.
+- Linux needs root ([with sudo](linux.md#with-sudo)) and Windows needs **Run as administrator**.
+  HiveOS already runs the miner as root.
 - On exit (Ctrl+C, or quitting the screen), the miner puts back what it changed: offsets 0,
   clocks unlocked, fans on auto. If it is killed, the settings stay until the next start.
 - On HiveOS, use either these flags or the OC page for a card, not both: the miner's exit
@@ -81,13 +81,13 @@ miner shows: 0, 1, 2…
 
 | Variable | What it does |
 | --- | --- |
-| `FEAR_DATA_DIR` | Linux and Windows: folder for the data the miner keeps. Default `keryx` next to the miner |
+| `FEAR_DATA_DIR` | Linux and Windows: folder for the data the miner keeps. Default `keryx` (Vela: `vela`) next to the miner |
 | `FEAR_SYNC=block` | Lower CPU use on rigs with many GPUs and few cores, for about 0.1% less hashrate |
 | `FEAR_SYNC=spin` | One full CPU core per GPU |
 
 ## Examples
 
-| Goal | HiveOS Extra config | `start-keryx.sh` / `start-keryx.bat` |
+| Goal | HiveOS Extra config | `start-<coin>.sh` / `start-<coin>.bat` |
 | --- | --- | --- |
 | Cards 0 and 1 only | `-device 0,1` | `-device 0,1` on the start line |
 | Stats on the LAN | `-stats 0.0.0.0:4060` | `-stats 0.0.0.0:4060` on the start line |

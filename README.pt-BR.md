@@ -4,7 +4,7 @@
 
 Miner multi-algoritmo para GPUs NVIDIA. Pacotes para HiveOS, Linux e Windows.
 
-[![release](https://img.shields.io/badge/release-1.2.1-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v1.2.1)
+[![release](https://img.shields.io/badge/release-1.3.0-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v1.3.0)
 ![HiveOS](https://img.shields.io/badge/HiveOS-jammy-3a9a3a)
 ![Linux](https://img.shields.io/badge/Linux-glibc%202.35%2B-3a9a3a)
 ![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-3a9a3a)
@@ -18,22 +18,23 @@ as opções próprias.
 | Moeda | Algoritmo | Placas | Docs |
 | --- | --- | --- | --- |
 | Keryx | `keryxhash` | NVIDIA Turing ou mais nova, 8 GB ou mais | [coins/keryx](coins/keryx/README.pt-BR.md) |
+| Vela | `vela` | NVIDIA Turing ou mais nova | [coins/vela](coins/vela/README.pt-BR.md) |
 
 > [!WARNING]
 > **Keryx:** o hard fork H14 está ativo. Versões anteriores à 0.0.22 são inválidas.
 > Veja [coins/keryx](coins/keryx/README.pt-BR.md).
 
-## Download: 1.2.1 (2026-10-20)
+## Download: 1.3.0 (2026-10-20)
 
 Um pacote por plataforma. Ele minera todas as moedas da tabela acima.
 
 | Plataforma | Arquivo | Guia de instalação |
 | --- | --- | --- |
-| HiveOS | [fear-miner-1.2.1.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.2.1/fear-miner-1.2.1.tar.gz) | [docs/pt-BR/hiveos.md](docs/pt-BR/hiveos.md) |
-| Linux | [fear-miner-linux-1.2.1.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.2.1/fear-miner-linux-1.2.1.tar.gz) | [docs/pt-BR/linux.md](docs/pt-BR/linux.md) |
-| Windows | [fear-miner-windows-1.2.1.zip](https://github.com/fearke85/fear-miner/releases/download/v1.2.1/fear-miner-windows-1.2.1.zip) | [docs/pt-BR/windows.md](docs/pt-BR/windows.md) |
+| HiveOS | [fear-miner-1.3.0.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-1.3.0.tar.gz) | [docs/pt-BR/hiveos.md](docs/pt-BR/hiveos.md) |
+| Linux | [fear-miner-linux-1.3.0.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-linux-1.3.0.tar.gz) | [docs/pt-BR/linux.md](docs/pt-BR/linux.md) |
+| Windows | [fear-miner-windows-1.3.0.zip](https://github.com/fearke85/fear-miner/releases/download/v1.3.0/fear-miner-windows-1.3.0.zip) | [docs/pt-BR/windows.md](docs/pt-BR/windows.md) |
 
-O que mudou: [notas da release](https://github.com/fearke85/fear-miner/releases/tag/v1.2.1) ·
+O que mudou: [notas da release](https://github.com/fearke85/fear-miner/releases/tag/v1.3.0) ·
 [CHANGELOG](CHANGELOG.md) (em inglês). Os checksums estão na página da release.
 
 ## Como começar
@@ -51,12 +52,12 @@ O que mudou: [notas da release](https://github.com/fearke85/fear-miner/releases/
 
 ## Documentação
 
-| Assunto | Para todas as moedas | Keryx |
-| --- | --- | --- |
-| Instalação | [HiveOS](docs/pt-BR/hiveos.md) · [Linux](docs/pt-BR/linux.md) · [Windows](docs/pt-BR/windows.md) | [Configurações por plataforma](coins/keryx/README.pt-BR.md#configurações) |
-| Opções | [Opções do miner](docs/pt-BR/options.md) | [Opções do Keryx](coins/keryx/docs/pt-BR/options.md) |
-| Problemas | [Solução de problemas](docs/pt-BR/troubleshooting.md) | [Problemas do Keryx](coins/keryx/docs/pt-BR/troubleshooting.md) |
-| Mineração solo | | [Keryx solo](coins/keryx/docs/pt-BR/solo.md) |
+| Assunto | Para todas as moedas | Keryx | Vela |
+| --- | --- | --- | --- |
+| Instalação | [HiveOS](docs/pt-BR/hiveos.md) · [Linux](docs/pt-BR/linux.md) · [Windows](docs/pt-BR/windows.md) | [Configurações por plataforma](coins/keryx/README.pt-BR.md#configurações) | [Configuração por plataforma](coins/vela/README.pt-BR.md#configuração) |
+| Opções | [Opções do miner](docs/pt-BR/options.md) | [Opções do Keryx](coins/keryx/docs/pt-BR/options.md) | [Opções do Vela](coins/vela/README.pt-BR.md#opções-do-vela) |
+| Problemas | [Solução de problemas](docs/pt-BR/troubleshooting.md) | [Problemas do Keryx](coins/keryx/docs/pt-BR/troubleshooting.md) | [Problemas do Vela](coins/vela/README.pt-BR.md#problemas) |
+| Mineração solo | | [Keryx solo](coins/keryx/docs/pt-BR/solo.md) | |
 
 ## Ferramentas da comunidade
 
