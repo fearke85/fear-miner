@@ -26,6 +26,9 @@ mesmo modelo, a faixa cobre as duas.
 | RTX 3080 | 27,6 | 190-193 | 0,143-0,145 | 1100 MHz | +250 | -2000 |
 | RTX 5070 Ti | 57,8-57,9 | 197-211 | 0,274-0,294 | 2300 MHz | +450 | 0 |
 
+O fear-miner 1.3.2 é cerca de 3% mais rápido que essas taxas no mesmo overclock, e um pouco mais
+eficiente (inf/J maior).
+
 A velocidade do Vela acompanha o clock de core: um core travado mais alto dá mais inf/s e consome
 mais watts.
 O Vela deixa a placa em carga total. Fique de olho na temperatura: uma RTX 5070 Ti sem overclock
@@ -50,7 +53,7 @@ Instale o pacote com o guia da sua plataforma e use estes valores.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.1/fear-miner-1.3.1.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-1.3.2.tar.gz` |
 | Hash algorithm | Qualquer um da lista (veja abaixo) |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `stratum+tcp://vela.suprnova.cc:7601` |

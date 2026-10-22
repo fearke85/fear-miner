@@ -5,6 +5,16 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.3.2 (2026-10-21)
+
+Vela is faster, at the same overclock. Nothing to reconfigure.
+
+- **Faster, Vela:** about +3% inf/s on the RTX 3060, 3070 and 3080, and about +3.3% on the RTX
+  5070 Ti, with better inf/J. Measured at a HiveOS overclock: 3060 +3.2%, 3070 +3.0%, 3080
+  +3.0%, and a higher inf/J on each. On a 5070 Ti at a 2300 MHz core lock: +3.3% inf/s and
+  +1.1% inf/J.
+- No new flags. Replace the package; the flight sheet stays.
+
 ## 1.3.1 (2026-10-20)
 
 A fix for Vela in 1.3.0.
