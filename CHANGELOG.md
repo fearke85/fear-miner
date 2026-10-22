@@ -13,7 +13,9 @@ Vela is faster, at the same overclock. Nothing to reconfigure.
   5070 Ti, with better inf/J. Measured at a HiveOS overclock: 3060 +3.2%, 3070 +3.0%, 3080
   +3.0%, and a higher inf/J on each. On a 5070 Ti at a 2300 MHz core lock: +3.3% inf/s and
   +1.1% inf/J.
-- No new flags. Replace the package; the flight sheet stays.
+- The speed in the miner and on HiveOS stays steady, instead of jumping from one result to the next. A card that stops reporting still falls to zero.
+- On Vela, a card shows the model loading into VRAM.
+- No new flags. Replace the package; the flight sheet stays. If this version is already installed, install the package again.
 
 ## 1.3.1 (2026-10-20)
 
