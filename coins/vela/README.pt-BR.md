@@ -3,7 +3,8 @@
 [English](README.md) · **Português (Brasil)** · [Todas as moedas](../../README.pt-BR.md)
 
 Como minerar Vela com o fear-miner. Algoritmo: `vela`. Mineração em pool na
-[suprnova](https://vela.suprnova.cc).
+[suprnova](https://vela.suprnova.cc) ou na [AriaPool](https://pool.ariabrain.com/vela.html), e
+mineração solo no seu próprio node Vela.
 
 Vela é uma moeda de prova por inferência: cada tentativa é uma inferência de um modelo de imagem,
 então o minerador mostra a velocidade em **inferências por segundo** (`inf/s`) e a eficiência em
@@ -48,20 +49,31 @@ próximas execuções e atualizações:
 
 Instale o pacote com o guia da sua plataforma e use estes valores.
 
+### Pools
+
+| Pool | `-pool` no Linux e no Windows | Pool URL na HiveOS |
+| --- | --- | --- |
+| [suprnova](https://vela.suprnova.cc) | `vela.suprnova.cc:7601` | `stratum+tcp://vela.suprnova.cc:7601` |
+| [AriaPool](https://pool.ariabrain.com/vela.html) | `http://159.69.194.46:3349` | `http://159.69.194.46:3349` |
+
+O login é o mesmo nas duas: seu endereço Vela e um nome de worker, senha `x`. As tabelas abaixo
+usam a suprnova; para a AriaPool, troque só a pool.
+
 ### Flight sheet na HiveOS
 
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-1.3.2.tar.gz` |
-| Hash algorithm | Qualquer um da lista (veja abaixo) |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-1.4.0.tar.gz` |
+| Hash algorithm | `poi`, ou qualquer um da lista (veja abaixo) |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `stratum+tcp://vela.suprnova.cc:7601` |
 | Password | `x` |
 | Extra config arguments | `-coin vela` |
 
-A HiveOS não tem `vela` na lista de Hash algorithm. Escolha qualquer algoritmo ali e coloque
-`-coin vela` em Extra config arguments: ele substitui o Hash algorithm e o miner minera Vela. As
+A HiveOS não tem `vela` na lista de Hash algorithm. Para o miner, `poi` é Vela. Com qualquer outro
+algoritmo, coloque `-coin vela` em Extra config arguments: ele substitui o Hash algorithm e o miner
+minera Vela. As
 opções do Vela vão na mesma linha, depois dele: `-coin vela --batch 4 --lanes 1`.
 
 A carteira é o seu endereço Vela, `vela1...`. Guia de instalação: [HiveOS](../../docs/pt-BR/hiveos.md).
@@ -78,6 +90,19 @@ A linha da pool já vem preenchida. Coloque o seu endereço em `-wallet`.
 
 Guias de instalação: [Linux](../../docs/pt-BR/linux.md) · [Windows](../../docs/pt-BR/windows.md).
 
+### Solo no seu próprio node
+
+A mineração solo precisa de um node Vela sincronizado, com o servidor RPC ligado. A recompensa do
+bloco vai para `-wallet`.
+
+```
+./fear-miner -coin vela -node http://RPCUSER:RPCPASSWORD@127.0.0.1:18743 -wallet vela1...
+```
+
+Use o `rpcuser`, o `rpcpassword` e o `rpcport` da configuração do seu node. Na HiveOS, coloque
+`-coin vela -node http://RPCUSER:RPCPASSWORD@IP_DO_NODE:18743` em Extra config arguments: o
+`-node` toma o lugar da Pool URL.
+
 ## Opções do Vela
 
 Opções da moeda usam dois hífens. Na HiveOS elas vão em Extra config arguments.
@@ -86,7 +111,7 @@ Opções da moeda usam dois hífens. Na HiveOS elas vão em Extra config argumen
 | --- | --- |
 | `--batch N` | Inferências por lançamento, de 1 a 16. O minerador escolhe pela memória da placa. |
 | `--lanes N` | Fluxos paralelos por placa, de 1 a 4. O minerador escolhe pela memória da placa. |
-| `--suggest-diff D` | Pede à pool a dificuldade de share `D`. |
+| `--suggest-diff D` | Pede à pool a dificuldade de share `D` (só na suprnova). |
 | `--models-dir PASTA` | Guarda o modelo em `PASTA`. |
 | `--model ARQUIVO` | Usa este arquivo de modelo onde ele está, sem baixar. |
 
@@ -95,8 +120,7 @@ A escolha automática é a mais rápida em todas as placas que medimos. Numa RTX
 
 ## Ainda não
 
-- Mineração solo num node Vela.
-- A porta TLS da pool.
+- A porta TLS da suprnova.
 
 ## Problemas
 

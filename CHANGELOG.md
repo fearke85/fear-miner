@@ -5,6 +5,39 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## Unreleased
+
+<!-- Rename to "## VER (YYYY-MM-DD)" at release time (release skill, step 3). -->
+
+## 1.4.0 (2026-10-23)
+
+- **New coin, Vearl (VRL) public testnet:** pool mining on AriaPool and NurseryPool, and solo
+  through their solo ports. RTX 30, 40 and 50 cards. On HiveOS, pick the Hash algorithm `vearl`
+  and put the pool as `HOST:PORT` in Pool URL. The miner keeps the pools' signed receipts of
+  your work, the proof of your testnet points. The Linux and Windows packages get a
+  `start-vearl` script. Settings and rates per card: [coins/vearl](coins/vearl/README.md).
+  Measured on the same RTX 5070 Ti: 305 MH/s, against 253 for the official testnet miner
+  (0.1.0-rc23).
+- **HiveOS:** a Pool URL written as a bare `HOST:PORT` is taken as a pool.
+- **New coin, Numen (NUMN):** pool mining on rplant (Europe, North America, Asia) and
+  ninjaraider, solo through rplant with the password `m=solo`, and solo on your own node with
+  `-node ws://...`. On HiveOS, pick the Hash algorithm `poscan`. The Linux and Windows packages
+  get a `start-numen` script. Settings and rates per card: [coins/numen](coins/numen/README.md).
+- **Faster, Vela:** about +4% inf/s on RTX 20, 30 and 40 cards and about +6.7% on the RTX
+  5070 Ti, with better inf/J, at the same overclock. Measured at each rig's overclock:
+  - a 7-card HiveOS rig (RTX 30 at 1500 MHz, 5070 Ti at 2300 MHz): 3060 15.6 -> 16.3 inf/s
+    (+4.3%, inf/J +4.2 to +4.4%), 3070 24.5 -> 25.5 (+4.1%, inf/J +4.3%), 3080 36.9 -> 38.5
+    (+4.1%, inf/J +3.9 to +4.2%), 5070 Ti 59.8 -> 63.8 (+6.7%, inf/J +5.2 to +5.9%);
+  - a HiveOS rig with RTX 40 cards: 4060 Ti at 2415 MHz 25.1 -> 26.1 (+3.8%, inf/J +4.1%),
+    4070 SUPER at 1755 MHz 33.2 -> 34.6 (+4.3%, inf/J +4.9%);
+  - an RTX 2070 Max-Q laptop at its 80 W limit: 11.0 -> 11.6 (+4.7%, inf/J +5.1%).
+- **New, Vela:** mine on [AriaPool](https://pool.ariabrain.com/vela.html) with
+  `-pool http://159.69.194.46:3349`; on HiveOS, put the same address in Pool URL. The HiveOS
+  Hash algorithm `poi` now means Vela, so `-coin vela` is no longer needed with it.
+- **New, Vela:** solo mining on your own Vela node:
+  `-node http://RPCUSER:RPCPASSWORD@127.0.0.1:18743 -wallet vela1...`. The block reward goes
+  to the wallet.
+
 ## 1.3.2 (2026-10-21)
 
 Vela is faster, at the same overclock. Nothing to reconfigure.

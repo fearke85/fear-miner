@@ -4,7 +4,7 @@
 
 Multi-algorithm NVIDIA GPU miner. Packages for HiveOS, Linux and Windows.
 
-[![release](https://img.shields.io/badge/release-1.3.2-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v1.3.2)
+[![release](https://img.shields.io/badge/release-1.4.0-2b7bd6)](https://github.com/fearke85/fear-miner/releases/tag/v1.4.0)
 ![HiveOS](https://img.shields.io/badge/HiveOS-jammy-3a9a3a)
 ![Linux](https://img.shields.io/badge/Linux-glibc%202.35%2B-3a9a3a)
 ![Windows](https://img.shields.io/badge/Windows-10%20%2F%2011-3a9a3a)
@@ -19,22 +19,24 @@ options.
 | --- | --- | --- | --- |
 | Keryx | `keryxhash` | NVIDIA Turing or newer, 8 GB or more | [coins/keryx](coins/keryx/README.md) |
 | Vela | `vela` | NVIDIA Turing or newer | [coins/vela](coins/vela/README.md) |
+| Numen | `numen` | NVIDIA Turing or newer | [coins/numen](coins/numen/README.md) |
+| Vearl (testnet) | `vearl` | NVIDIA Ampere or newer | [coins/vearl](coins/vearl/README.md) |
 
 > [!WARNING]
 > **Keryx:** the H14 hard fork is live. Versions before 0.0.22 are invalid.
 > See [coins/keryx](coins/keryx/README.md).
 
-## Download: 1.3.2 (2026-10-22)
+## Download: 1.4.0 (2026-10-23)
 
 One package per platform. It mines every coin in the table above.
 
 | Platform | File | Install guide |
 | --- | --- | --- |
-| HiveOS | [fear-miner-1.3.2.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-1.3.2.tar.gz) | [docs/en/hiveos.md](docs/en/hiveos.md) |
-| Linux | [fear-miner-linux-1.3.2.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-linux-1.3.2.tar.gz) | [docs/en/linux.md](docs/en/linux.md) |
-| Windows | [fear-miner-windows-1.3.2.zip](https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-windows-1.3.2.zip) | [docs/en/windows.md](docs/en/windows.md) |
+| HiveOS | [fear-miner-1.4.0.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-1.4.0.tar.gz) | [docs/en/hiveos.md](docs/en/hiveos.md) |
+| Linux | [fear-miner-linux-1.4.0.tar.gz](https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-linux-1.4.0.tar.gz) | [docs/en/linux.md](docs/en/linux.md) |
+| Windows | [fear-miner-windows-1.4.0.zip](https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-windows-1.4.0.zip) | [docs/en/windows.md](docs/en/windows.md) |
 
-What changed: [release notes](https://github.com/fearke85/fear-miner/releases/tag/v1.3.2) ·
+What changed: [release notes](https://github.com/fearke85/fear-miner/releases/tag/v1.4.0) ·
 [CHANGELOG](CHANGELOG.md). Checksums are on the release page.
 
 ## Getting started
@@ -52,12 +54,12 @@ What changed: [release notes](https://github.com/fearke85/fear-miner/releases/ta
 
 ## Documentation
 
-| Topic | For every coin | Keryx | Vela |
-| --- | --- | --- | --- |
-| Install | [HiveOS](docs/en/hiveos.md) · [Linux](docs/en/linux.md) · [Windows](docs/en/windows.md) | [Settings per platform](coins/keryx/README.md#settings) | [Settings per platform](coins/vela/README.md#settings) |
-| Options | [Miner options](docs/en/options.md) | [Keryx options](coins/keryx/docs/en/options.md) | [Vela options](coins/vela/README.md#vela-options) |
-| Problems | [Troubleshooting](docs/en/troubleshooting.md) | [Keryx troubleshooting](coins/keryx/docs/en/troubleshooting.md) | [Vela troubleshooting](coins/vela/README.md#troubleshooting) |
-| Solo mining | | [Keryx solo](coins/keryx/docs/en/solo.md) | |
+| Topic | For every coin | Keryx | Vela | Numen | Vearl |
+| --- | --- | --- | --- | --- | --- |
+| Install | [HiveOS](docs/en/hiveos.md) · [Linux](docs/en/linux.md) · [Windows](docs/en/windows.md) | [Settings per platform](coins/keryx/README.md#settings) | [Settings per platform](coins/vela/README.md#settings) | [Settings per platform](coins/numen/README.md#settings) | [Settings per platform](coins/vearl/README.md#settings) |
+| Options | [Miner options](docs/en/options.md) | [Keryx options](coins/keryx/docs/en/options.md) | [Vela options](coins/vela/README.md#vela-options) | [Numen options](coins/numen/README.md#numen-options) | [Vearl options](coins/vearl/README.md#vearl-options) |
+| Problems | [Troubleshooting](docs/en/troubleshooting.md) | [Keryx troubleshooting](coins/keryx/docs/en/troubleshooting.md) | [Vela troubleshooting](coins/vela/README.md#troubleshooting) | [Numen troubleshooting](coins/numen/README.md#troubleshooting) | [Vearl troubleshooting](coins/vearl/README.md#troubleshooting) |
+| Solo mining | | [Keryx solo](coins/keryx/docs/en/solo.md) | [Vela solo](coins/vela/README.md#solo-on-your-own-node) | [Numen solo](coins/numen/README.md#solo-through-rplant) | [Vearl solo](coins/vearl/README.md#solo) |
 
 ## Community tools
 

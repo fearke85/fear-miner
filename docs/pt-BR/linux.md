@@ -3,7 +3,7 @@
 [English](../en/linux.md) · **Português (Brasil)** · [Voltar ao README](../../README.pt-BR.md)
 
 Como instalar o fear-miner numa máquina Linux comum, fora do HiveOS, para qualquer moeda. Os
-valores da sua moeda estão na página dela: [Keryx](../../coins/keryx/README.pt-BR.md#start-keryxsh-linux-e-start-keryxbat-windows), [Vela](../../coins/vela/README.pt-BR.md#start-velash-linux-e-start-velabat-windows).
+valores da sua moeda estão na página dela: [Keryx](../../coins/keryx/README.pt-BR.md#start-keryxsh-linux-e-start-keryxbat-windows), [Vela](../../coins/vela/README.pt-BR.md#start-velash-linux-e-start-velabat-windows), [Numen](../../coins/numen/README.pt-BR.md#start-numensh-linux-e-start-numenbat-windows).
 
 ## Antes de começar
 
@@ -15,15 +15,15 @@ valores da sua moeda estão na página dela: [Keryx](../../coins/keryx/README.pt
 ## Instalar
 
 ```
-wget https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-linux-1.3.2.tar.gz
-tar -xzf fear-miner-linux-1.3.2.tar.gz
+wget https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-linux-1.4.0.tar.gz
+tar -xzf fear-miner-linux-1.4.0.tar.gz
 cd fear-miner
 nano start-keryx.sh        # Vela: start-vela.sh
 ```
 
 ## Configurações no script de start
 
-Cada moeda tem o seu script: `start-keryx.sh` para o Keryx, `start-vela.sh` para o Vela.
+Cada moeda tem o seu script: `start-keryx.sh` para o Keryx, `start-vela.sh` para o Vela, `start-numen.sh` para o Numen.
 Deixe uma linha sem comentário, a da pool ou a do solo, e coloque o seu endereço em `-wallet`. A pool, o node e os
 outros valores estão na página da moeda.
 

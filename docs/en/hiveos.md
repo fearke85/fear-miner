@@ -4,7 +4,8 @@
 
 How to install fear-miner on HiveOS, for any coin. The values for your coin (algorithm, wallet
 template, pool URL) are on its page: [Keryx](../../coins/keryx/README.md#hiveos-flight-sheet),
-[Vela](../../coins/vela/README.md#hiveos-flight-sheet).
+[Vela](../../coins/vela/README.md#hiveos-flight-sheet),
+[Numen](../../coins/numen/README.md#hiveos-flight-sheet).
 
 ## Before you start
 
@@ -19,7 +20,7 @@ Create a flight sheet with miner **Custom**:
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-1.3.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-1.4.0.tar.gz` |
 | Hash algorithm | from your coin's page |
 | Wallet and worker template | from your coin's page |
 | Pool URL | from your coin's page |
@@ -34,15 +35,15 @@ Apply the flight sheet. The dashboard shows the hashrate once the cards are mini
 ## Install from the rig console
 
 ```
-/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.3.2/fear-miner-1.3.2.tar.gz
+/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-1.4.0.tar.gz
 ```
 
 Add `-f` to reinstall.
 
 ## Update to a new version
 
-Change the version in the Installation URL, twice: in `v1.3.2` and in
-`fear-miner-1.3.2.tar.gz`. The rest of the flight sheet stays. Keeping the old URL keeps
+Change the version in the Installation URL, twice: in `v1.4.0` and in
+`fear-miner-1.4.0.tar.gz`. The rest of the flight sheet stays. Keeping the old URL keeps
 installing the old version.
 
 Everything the miner keeps (models, keys, the log) stays in `/var/lib/fear-miner` across updates
@@ -66,7 +67,8 @@ coin (`-coin`); a `-coin` in Extra config arguments overrides it, for a coin Hiv
 | Mine Vela, which is not in HiveOS's Hash algorithm list | `-coin vela` |
 
 The package already runs headless. Miner options: [options.md](options.md). Coin options: your
-coin's page ([Keryx](../../coins/keryx/docs/en/options.md), [Vela](../../coins/vela/README.md#vela-options)).
+coin's page ([Keryx](../../coins/keryx/docs/en/options.md), [Vela](../../coins/vela/README.md#vela-options),
+[Numen](../../coins/numen/README.md#numen-options)).
 
 ## Where things are
 

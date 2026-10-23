@@ -3,7 +3,7 @@
 **English** · [Português (Brasil)](../pt-BR/windows.md) · [Back to README](../../README.md)
 
 How to install fear-miner on Windows, for any coin. The values for your coin are on its page:
-[Keryx](../../coins/keryx/README.md#start-keryxsh-linux-and-start-keryxbat-windows), [Vela](../../coins/vela/README.md#start-velash-linux-and-start-velabat-windows).
+[Keryx](../../coins/keryx/README.md#start-keryxsh-linux-and-start-keryxbat-windows), [Vela](../../coins/vela/README.md#start-velash-linux-and-start-velabat-windows), [Numen](../../coins/numen/README.md#start-numensh-linux-and-start-numenbat-windows).
 
 ## Before you start
 
@@ -14,14 +14,14 @@ How to install fear-miner on Windows, for any coin. The values for your coin are
 
 ## Install
 
-1. Download `fear-miner-windows-1.3.2.zip` from the
-   [release page](https://github.com/fearke85/fear-miner/releases/tag/v1.3.2).
+1. Download `fear-miner-windows-1.4.0.zip` from the
+   [release page](https://github.com/fearke85/fear-miner/releases/tag/v1.4.0).
 2. Extract it to a folder of its own, for example `C:\fear-miner`.
 3. Right-click `start-keryx.bat` (Vela: `start-vela.bat`), choose **Edit** (or open it in Notepad).
 
 ## Settings in the start script
 
-Each coin has its own script: `start-keryx.bat` for Keryx, `start-vela.bat` for Vela. Leave one
+Each coin has its own script: `start-keryx.bat` for Keryx, `start-vela.bat` for Vela, `start-numen.bat` for Numen. Leave one
 line uncommented, the pool line or the solo line, and put your address in `-wallet`. The pool, the node and the other
 values are on your coin's page.
 
