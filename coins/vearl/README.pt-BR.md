@@ -9,7 +9,10 @@ e solo pela porta solo de qualquer uma das duas.
 As moedas da testnet não têm valor. O programa de recompensas conta pontos por bloco; as regras
 e o cadastro estão em [vearl.org](https://vearl.org/participate/).
 
-O minerador mostra a velocidade em MH/s e, ao lado, em sigma/s, a unidade que as pools mostram.
+O minerador mostra a velocidade em **sigmas por segundo** (`sigma/s`), a unidade que as pools
+mostram, e a eficiência em `sigma/J`. A HiveOS só conhece unidades de hash e mostra o mesmo número
+como H/s. Um sigma são 4096 tentativas de tile, então o MH/s do minerador oficial é
+sigma/s × 4096 / 1.000.000.
 
 ## Placas
 
@@ -20,14 +23,14 @@ O minerador mostra a velocidade em MH/s e, ao lado, em sigma/s, a unidade que as
 Medido com o fear-miner no overclock de cada rig (RTX 30 numa rig HiveOS, RTX 40 em outra,
 RTX 5070 Ti num desktop no clock de fábrica):
 
-| Placa | MH/s | sigma/s |
+| Placa | sigma/s | MH/s do minerador oficial |
 | --- | --- | --- |
-| RTX 3060 | 61 | 15.000 |
-| RTX 3070 | 96 | 23.500 |
-| RTX 3080 | 129 | 31.600 |
-| RTX 4060 Ti | 129 | 31.400 |
-| RTX 4070 SUPER | 166 | 40.400 |
-| RTX 5070 Ti | 305 | 74.500 |
+| RTX 3060 | 15.600 | 64 |
+| RTX 3070 | 24.500 | 100 |
+| RTX 3080 | 31.600 | 129 |
+| RTX 4060 Ti | 31.400 | 129 |
+| RTX 4070 SUPER | 40.400 | 166 |
+| RTX 5070 Ti | 94.400 | 387 |
 
 ## Configuração
 
@@ -49,7 +52,7 @@ A carteira é o seu endereço Vearl (`vrl1...`). As pools não pedem cadastro ne
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.0/fear-miner-1.4.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.1/fear-miner-1.4.1.tar.gz` |
 | Hash algorithm | `vearl` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `vrl.ariabrain.com:3354` |

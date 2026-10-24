@@ -5,9 +5,21 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
-## Unreleased
+## 1.4.1 (2026-10-24)
 
-<!-- Rename to "## VER (YYYY-MM-DD)" at release time (release skill, step 3). -->
+- **Faster Vearl:** about **+19%** sigma/s on RTX 50 cards with **+5 to +15%** sigma/J (a new tile
+  kernel for them), and about **+4.5%** on RTX 30 with +1 to +2.5% sigma/J, at the same overclock.
+  Measured on a HiveOS rig at its overclock: 3060 14.9k -> 15.6k sigma/s, 3070 23.2k -> 24.5k,
+  3080 29.0k -> 30.0k, 5070 Ti 56.5k -> 67.1k; on a 5070 Ti at stock clocks, 73.0k -> 83.8k at the
+  same 291 W. On RTX 50 the noise now runs inside that kernel too: another **+8 to +9%** sigma/s
+  with **+24%** sigma/J on the rig's 5070 Ti cards (80k -> 87k sigma/s, 238 -> 208 W), and
+  **+11%** at stock clocks (85.1k -> 94.4k at 299 W); RTX 30 +0.7%.
+- **Vearl shows sigma/s, the pools' unit,** instead of MH/s, and its efficiency in sigma/J.
+  HiveOS shows the same number as H/s, as it does for Vela. One sigma is 4096 tile attempts:
+  305 MH/s is 74,500 sigma/s.
+- **Vearl gives the CPU back:** the miner used one CPU core at 100% per card while it mined
+  Vearl, which raised the load average with the card count. It now uses about 12% of a core per
+  card, at the same sigma/s (measured on a 5070 Ti: 94.5k sigma/s either way, CPU 100% -> 12%).
 
 ## 1.4.0 (2026-10-23)
 

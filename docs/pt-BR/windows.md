@@ -15,8 +15,8 @@ dela: [Keryx](../../coins/keryx/README.pt-BR.md#start-keryxsh-linux-e-start-kery
 
 ## Instalar
 
-1. Baixe o `fear-miner-windows-1.4.0.zip` na
-   [página da release](https://github.com/fearke85/fear-miner/releases/tag/v1.4.0).
+1. Baixe o `fear-miner-windows-1.4.1.zip` na
+   [página da release](https://github.com/fearke85/fear-miner/releases/tag/v1.4.1).
 2. Extraia numa pasta só dele, por exemplo `C:\fear-miner`.
 3. Clique com o botão direito no `start-keryx.bat` (Vela: `start-vela.bat`) e escolha **Editar** (ou abra no Bloco de Notas).
 
