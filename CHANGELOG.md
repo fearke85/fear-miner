@@ -5,6 +5,27 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.4.2 (2026-10-25)
+
+Vearl is much faster on RTX 30 and faster on RTX 50, at the same overclock, and Vearl and Numen
+get a new pool each. This is the first full release since 1.3.2: the 1.4.1 and 1.4.0 test
+versions below are part of it.
+
+- **Faster Vearl on RTX 30: about +40% sigma/s** at the same overclock. Measured on a HiveOS
+  rig at its overclock, against 1.4.1: 3060 15.7k -> 22.3k sigma/s, 3070 24.7k -> 35.3k, 3080
+  33.3k -> 45.9k (39.2k on a 3080 that its power limit holds back).
+- **Faster Vearl on RTX 50: about +15 to +20%.** The same rig's 5070 Ti cards: 87.5k -> 105.0k
+  sigma/s. A 5070 Ti at stock clocks: 94.4k -> 108.1k, at about 290 W instead of 299.
+- The 7-card rig as a whole: 298k -> 375k sigma/s (+26%), every share accepted. RTX 40 cards run
+  as in 1.4.1.
+- **New pool, Vearl:** the [Vearl pool](https://pool.vearl.org/), shared on
+  `pool.vearl.org:3333` (PPLNS, 1%) and solo on `pool.vearl.org:3366` (1%).
+- **New pool, Numen:** [Nitopool](https://pool.nitopool.online/), shared on
+  `numn.stratum.nitopool.online:3028` (PPLNS, 0.9%; 3029 for farms) and solo on port 3024 (3026
+  for farms). Nitopool answers a share that arrives after its job changed with `invalid PoScan
+  work`; a few of those are normal.
+- No new flags.
+
 ## 1.4.1 (2026-10-24)
 
 - **Faster Vearl:** about **+19%** sigma/s on RTX 50 cards with **+5 to +15%** sigma/J (a new tile

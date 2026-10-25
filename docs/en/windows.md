@@ -14,8 +14,8 @@ How to install fear-miner on Windows, for any coin. The values for your coin are
 
 ## Install
 
-1. Download `fear-miner-windows-1.4.1.zip` from the
-   [release page](https://github.com/fearke85/fear-miner/releases/tag/v1.4.1).
+1. Download `fear-miner-windows-1.4.2.zip` from the
+   [release page](https://github.com/fearke85/fear-miner/releases/tag/v1.4.2).
 2. Extract it to a folder of its own, for example `C:\fear-miner`.
 3. Right-click `start-keryx.bat` (Vela: `start-vela.bat`), choose **Edit** (or open it in Notepad).
 

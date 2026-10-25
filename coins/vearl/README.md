@@ -3,8 +3,8 @@
 **English** · [Português (Brasil)](README.pt-BR.md) · [All coins](../../README.md)
 
 Mining Vearl (VRL) on its public testnet with fear-miner. Algorithm: `vearl`. Pool mining on
-[AriaPool](https://pool.ariabrain.com/vrl.html) or [NurseryPool](https://vearl.nurserypool.com/),
-and solo through either pool's solo port.
+[AriaPool](https://pool.ariabrain.com/vrl.html), [NurseryPool](https://vearl.nurserypool.com/) or
+the [Vearl pool](https://pool.vearl.org/), and solo through any of them on its solo port.
 
 The testnet coins have no value. Its rewards program counts points per block; the rules and the
 registration are on [vearl.org](https://vearl.org/participate/).
@@ -23,12 +23,12 @@ RTX 5070 Ti on a desktop at stock clocks):
 
 | Card | sigma/s | official miner MH/s |
 | --- | --- | --- |
-| RTX 3060 | 15,600 | 64 |
-| RTX 3070 | 24,500 | 100 |
-| RTX 3080 | 31,600 | 129 |
+| RTX 3060 | 22,300 | 91 |
+| RTX 3070 | 35,300 | 145 |
+| RTX 3080 | 45,900 | 188 |
 | RTX 4060 Ti | 31,400 | 129 |
 | RTX 4070 SUPER | 40,400 | 166 |
-| RTX 5070 Ti | 94,400 | 387 |
+| RTX 5070 Ti | 108,100 | 443 |
 
 ## Settings
 
@@ -42,6 +42,8 @@ Install the package with your platform's guide, then use these values.
 | AriaPool | solo (0%) | `vrl.ariabrain.com:3355` | `vrl.ariabrain.com:3355` |
 | [NurseryPool](https://vearl.nurserypool.com/) | shared (PPLNS, 2%) | `vearl.nurserypool.com:3367` | `vearl.nurserypool.com:3367` |
 | NurseryPool | solo (0%) | `vearl.nurserypool.com:3366` | `vearl.nurserypool.com:3366` |
+| [Vearl pool](https://pool.vearl.org/) | shared (PPLNS, 1%) | `pool.vearl.org:3333` | `pool.vearl.org:3333` |
+| Vearl pool | solo (1%) | `pool.vearl.org:3366` | `pool.vearl.org:3366` |
 
 The wallet is your Vearl address (`vrl1...`). The pools need no registration and no password.
 
@@ -50,7 +52,7 @@ The wallet is your Vearl address (`vrl1...`). The pools need no registration and
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.1/fear-miner-1.4.1.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.2/fear-miner-1.4.2.tar.gz` |
 | Hash algorithm | `vearl` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `vrl.ariabrain.com:3354` |
@@ -73,8 +75,8 @@ Install guides: [Linux](../../docs/en/linux.md) · [Windows](../../docs/en/windo
 
 ### Solo
 
-Point `-pool` (on HiveOS, Pool URL) at a pool's solo port: `vrl.ariabrain.com:3355` or
-`vearl.nurserypool.com:3366`. A block you find is paid to your address whole, and its testnet
+Point `-pool` (on HiveOS, Pool URL) at a pool's solo port: `vrl.ariabrain.com:3355`,
+`vearl.nurserypool.com:3366` or `pool.vearl.org:3366`. A block you find is paid to your address whole, and its testnet
 points are yours. A solo block is rare on one rig; the shared port pays steadily.
 
 Solo on your own Vearl node is not available: the node mines by itself and takes no outside

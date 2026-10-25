@@ -3,8 +3,9 @@
 [English](README.md) · **Português (Brasil)** · [Todas as moedas](../../README.pt-BR.md)
 
 Como minerar Numen (NUMN) com o fear-miner. Algoritmo: `numen` (a HiveOS chama de `poscan`).
-Mineração em pool na [rplant](https://pool.rplant.xyz) ou na [ninjaraider](https://ninjaraider.com),
-solo pela rplant e solo no seu próprio node Numen.
+Mineração em pool na [rplant](https://pool.rplant.xyz), na [ninjaraider](https://ninjaraider.com) ou na
+[Nitopool](https://pool.nitopool.online/), solo pela rplant ou pela Nitopool e solo no seu próprio
+node Numen.
 
 O minerador mostra a velocidade em MH/s.
 
@@ -38,15 +39,19 @@ Instale o pacote com o guia da sua plataforma e use estes valores.
 | rplant, América do Norte | `na.rplant.xyz:7189` | `stratum+tcp://na.rplant.xyz:7189` |
 | rplant, Ásia | `asia.rplant.xyz:7189` | `stratum+tcp://asia.rplant.xyz:7189` |
 | [ninjaraider](https://ninjaraider.com) | `numen.ninjaraider.com:44960` | `stratum+tcp://numen.ninjaraider.com:44960` |
+| [Nitopool](https://pool.nitopool.online/) | `numn.stratum.nitopool.online:3028` | `stratum+tcp://numn.stratum.nitopool.online:3028` |
+| Nitopool, farms | `numn.stratum.nitopool.online:3029` | `stratum+tcp://numn.stratum.nitopool.online:3029` |
 
 Escolha a região da rplant mais perto do rig: um link lento transforma shares atrasadas em stale.
+O modo compartilhado da Nitopool é PPLNS com taxa de 0,9%; a porta de farm começa com uma
+dificuldade de share oito vezes maior, para rigs com muitas placas.
 
 ### Flight sheet na HiveOS
 
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.1/fear-miner-1.4.1.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.2/fear-miner-1.4.2.tar.gz` |
 | Hash algorithm | `poscan` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `stratum+tcp://eu.rplant.xyz:7189` |
@@ -80,6 +85,12 @@ inteiro para você, com a taxa solo da rplant (2%, contra 1% no modo compartilha
 As outras opções de senha da rplant vão na mesma linha, separadas por vírgula: `m=solo,d=200000`
 fixa a dificuldade de share.
 
+### Solo pela Nitopool
+
+A Nitopool minera solo em portas próprias: `numn.stratum.nitopool.online:3024`, ou `numn.stratum.nitopool.online:3026` para uma farm. Um bloco que
+você achar é pago inteiro para você, com a taxa de 0,9% da Nitopool. Na HiveOS, coloque
+`stratum+tcp://numn.stratum.nitopool.online:3024` na Pool URL; a senha continua `x`.
+
 ### Solo no seu próprio node
 
 ```
@@ -110,6 +121,7 @@ A primeira partida mede a placa por alguns segundos e guarda o resultado.
 | O que aparece | O que fazer |
 | --- | --- |
 | Shares rejeitadas como `stale share` | Algumas são normais: os jobs mudam a cada poucos segundos. Muitas indicam um link lento; escolha uma região da rplant mais perto. |
+| Shares rejeitadas como `invalid PoScan work` na Nitopool | Algumas são normais: é assim que a Nitopool responde a uma share que chegou depois de o job mudar. Muitas indicam um link lento até a pool. |
 | `pass -pool or -node, not both` | Deixe só um dos dois. |
 
 Problemas gerais: [problemas](../../docs/pt-BR/troubleshooting.md).
