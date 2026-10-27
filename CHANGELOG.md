@@ -5,6 +5,15 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.4.3 (2026-10-27)
+
+Vearl now runs on RTX 20xx cards and on the CMP 40HX and CMP 50HX. GTX 16xx and the CMP 30HX
+still cannot: they have no tensor cores. RTX 30, 40 and 50 are unchanged. No new flags.
+
+- **CMP 50HX, 200 W limit, no overclock: 19,300 sigma/s** (79 in the official miner's MH/s),
+  drawing 194-195 W, core about 1760 MHz.
+- RTX 30, 40 and 50 keep the 1.4.2 rates.
+
 ## 1.4.2 (2026-10-25)
 
 Vearl is much faster on RTX 30 and faster on RTX 50, at the same overclock, and Vearl and Numen

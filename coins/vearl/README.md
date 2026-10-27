@@ -16,7 +16,8 @@ is 4096 tile attempts, so the official miner's MH/s is sigma/s × 4096 / 1,000,0
 ## Cards
 
 - NVIDIA Ampere or newer (RTX 30xx, 40xx, 50xx).
-- Turing (RTX 20xx) and older are not supported: Vearl's work needs instructions they lack.
+- Turing with tensor cores (RTX 20xx, CMP 40HX, CMP 50HX, T4).
+- GTX 16xx and CMP 30HX are the same generation and have no tensor cores, so Vearl cannot use them. Older cards cannot either.
 
 Measured with fear-miner at each rig's overclock (RTX 30 on a HiveOS rig, RTX 40 on another,
 RTX 5070 Ti on a desktop at stock clocks):
@@ -29,6 +30,8 @@ RTX 5070 Ti on a desktop at stock clocks):
 | RTX 4060 Ti | 31,400 | 129 |
 | RTX 4070 SUPER | 40,400 | 166 |
 | RTX 5070 Ti | 108,100 | 443 |
+
+A CMP 50HX at a 200 W limit, with no overclock, does 19,300 sigma/s (79 MH/s).
 
 ## Settings
 
@@ -52,7 +55,7 @@ The wallet is your Vearl address (`vrl1...`). The pools need no registration and
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.2/fear-miner-1.4.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.3/fear-miner-1.4.3.tar.gz` |
 | Hash algorithm | `vearl` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `vrl.ariabrain.com:3354` |
@@ -101,7 +104,7 @@ Coin options take two hyphens. On HiveOS they go in Extra config arguments.
 
 | What you see | What to do |
 | --- | --- |
-| `no NVIDIA GPU of compute capability 8.0 or newer` | The card is older than RTX 30. Vearl cannot use it. |
+| `no NVIDIA GPU that can run Vearl` | The card is older than RTX 20, or it is a GTX 16xx / CMP 30HX (no tensor cores). |
 | `payout address` errors | The wallet must be a `vrl1...` address, with `.worker` after it if you want a worker name. |
 | Shares counted as stale right after a block | Normal: a new block makes the previous one's shares late. |
 
