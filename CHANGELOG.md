@@ -5,6 +5,12 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.4.4 (2026-10-27)
+
+A large proof sent to a distant pool is no longer held up for many seconds on the way out.
+Shares that were dropped as stale because the send was slow can now arrive while the job is
+still valid. No new flags.
+
 ## 1.4.3 (2026-10-27)
 
 Vearl now runs on RTX 20xx cards and on the CMP 40HX and CMP 50HX. GTX 16xx and the CMP 30HX
