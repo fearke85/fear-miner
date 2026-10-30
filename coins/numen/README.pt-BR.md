@@ -51,7 +51,7 @@ dificuldade de share oito vezes maior, para rigs com muitas placas.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.2/fear-miner-1.5.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.3/fear-miner-1.5.3.tar.gz` |
 | Hash algorithm | `poscan` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `stratum+tcp://eu.rplant.xyz:7189` |

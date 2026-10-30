@@ -24,10 +24,10 @@ pedidos de IA desse tier. Não é preciso usar `--tier`.
 
 | Memória da placa | Tier | Disco livre para o modelo |
 | --- | --- | --- |
-| 8 GB | 0 | ~6,7 GB |
-| 10-11 GB | 1 | ~8,5 GB |
-| 12-16 GB | 2 | ~10 GB |
-| 20-24 GB | 3 | ~17 GB |
+| 8-11 GB | 0 | ~6,7 GB |
+| 12 GB | 1 | ~8,5 GB |
+| 16-20 GB | 2 | ~10 GB |
+| 24 GB | 3 | ~17 GB |
 | 32 GB ou mais | 4 | ~30 GB |
 
 Com monitor ligado, o que o desktop ocupa não conta, e uma placa no limite pode minerar um tier
@@ -42,7 +42,7 @@ Instale o pacote pelo guia da sua plataforma e use estes valores.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.2/fear-miner-1.5.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.3/fear-miner-1.5.3.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORTA` do seu node |

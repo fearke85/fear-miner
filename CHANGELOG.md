@@ -5,6 +5,22 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.5.3 (2026-10-30)
+
+Keryx: update from 1.5.2. No new flags.
+
+- **Pools:** since the H15 fork, Suprnova marked fear-miner rigs "cannot answer H15 inference
+  requests". AI answers sent through the pool now carry the proof H15 requires, and the rig
+  answers the pool's checks of them, so the warning is gone.
+- The card that answers AI requests no longer fails for lack of VRAM on 8, 12, 24 and 32 GB
+  cards. The tier each card mines by default: 8-11 GB tier 0, 12 GB tier 1, 16-20 GB tier 2,
+  24 GB tier 3, 32 GB tier 4.
+- Linux under WSL on Windows: cards are sized by the VRAM they can really give, as on Windows.
+  A card short of it no longer gives empty AI answers.
+- On Windows, the tier is chosen by the VRAM the card can really give, even with no monitor
+  attached.
+- Checked on more cards: the network accepts the AI answers of RTX 20, RTX 40 and the CMP 170HX.
+
 ## 1.5.2 (2026-10-30)
 
 Keryx: update from 1.5.0 or 1.5.1. No new flags.
