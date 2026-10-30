@@ -55,7 +55,7 @@ The wallet is your Vearl address (`vrl1...`). The pools need no registration and
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.0/fear-miner-1.5.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.1/fear-miner-1.5.1.tar.gz` |
 | Hash algorithm | `vearl` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `vrl.ariabrain.com:3354` |

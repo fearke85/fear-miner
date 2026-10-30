@@ -5,6 +5,12 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.5.1 (2026-10-30)
+
+Keryx: on a rig that mixes card models, the network's checks of an AI answer could not always be
+answered, which costs a strike. 1.5.1 answers them on a card of the same model that answered.
+Update from 1.5.0 before or right after the H15 fork. No new flags.
+
 ## 1.5.0 (2026-10-30)
 
 Keryx: ready for the H15 hard fork (DAA 140,115,000, 2026-10-30, around 14:30 UTC). From the fork
