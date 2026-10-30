@@ -5,6 +5,17 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.5.2 (2026-10-30)
+
+Keryx: update from 1.5.0 or 1.5.1. No new flags.
+
+- Since the H15 fork, the card that answers AI requests could stop mining with "not enough VRAM
+  for this tier from H15" while the other cards mined. It now keeps mining.
+- The network's checks of an AI answer can now be answered by any card of the same generation
+  (for example any RTX 30), not only by a card of the same model. Speed is unchanged.
+- A check of an answer given before the update cannot be answered after it. Update once and
+  leave the miner running.
+
 ## 1.5.1 (2026-10-30)
 
 Keryx: on a rig that mixes card models, the network's checks of an AI answer could not always be
