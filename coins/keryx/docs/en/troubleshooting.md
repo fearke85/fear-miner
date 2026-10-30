@@ -6,10 +6,10 @@ Problems specific to Keryx. Problems that can happen with any coin (old version 
 CUDA device", risers, crashes from overclock) are in the
 [general troubleshooting](../../../../docs/en/troubleshooting.md).
 
-## Shares are rejected since 2026-10-09
+## Shares are rejected since 2026-10-30
 
-Versions before 0.0.22 are invalid since the H14 hard fork. Install the
-[current version](../../../../README.md). Solo: update your node to keryx-node 1.6.4 or newer.
+Versions before 1.5.0 are invalid since the H15 hard fork. Install the
+[current version](../../../../README.md). Solo: update your node to keryx-node 1.6.6 or newer.
 
 ## "no device fits a tier"
 
@@ -34,6 +34,9 @@ Each AI request has a line in `log.txt`, and a `MISSED` line names the step a re
 when its time ran out. Common causes: a card that crashed, a slow disk or little RAM, a rig
 restarted in the middle of a request. Send the log on [Discord](https://discord.gg/uK93NPAhbd) if
 strikes continue.
+
+In the first days after H15, if your rig takes a strike, stop the miner and send `log.txt` on
+[Discord](https://discord.gg/uK93NPAhbd), so the cause can be found before it repeats.
 
 A card that crashes while answering AI requests keeps mining but is kept off AI requests for a
 while, and the other cards answer them. The crash report in `log.txt` names the card.

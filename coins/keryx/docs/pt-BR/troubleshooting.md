@@ -6,10 +6,10 @@ Problemas específicos do Keryx. Os que podem acontecer com qualquer moeda (vers
 HiveOS, "no CUDA device", risers, crashes por overclock) estão na
 [solução de problemas geral](../../../../docs/pt-BR/troubleshooting.md).
 
-## Shares rejeitados desde 09/10/2026
+## Shares rejeitados desde 30/10/2026
 
-Versões anteriores à 0.0.22 são inválidas desde o hard fork H14. Instale a
-[versão atual](../../../../README.pt-BR.md). Solo: atualize o seu node para o keryx-node 1.6.4 ou
+Versões anteriores à 1.5.0 são inválidas desde o hard fork H15. Instale a
+[versão atual](../../../../README.pt-BR.md). Solo: atualize o seu node para o keryx-node 1.6.6 ou
 mais novo.
 
 ## "no device fits a tier"
@@ -36,6 +36,9 @@ Cada pedido de IA tem uma linha no `log.txt`, e uma linha `MISSED` diz em qual e
 quando o tempo acabou. Causas comuns: uma placa que travou, disco lento ou pouca RAM, uma rig
 reiniciada no meio de um pedido. Se os strikes continuarem, mande o log no
 [Discord](https://discord.gg/uK93NPAhbd).
+
+Nos primeiros dias depois do H15, se a sua rig levar um strike, pare o miner e mande o `log.txt` no
+[Discord](https://discord.gg/uK93NPAhbd), para a causa ser encontrada antes de se repetir.
 
 Uma placa que trava enquanto responde pedidos de IA continua minerando, mas fica um tempo sem pegar
 pedidos de IA, e as outras placas respondem por ela. O relatório de crash no `log.txt` cita a placa.

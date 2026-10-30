@@ -5,6 +5,22 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.5.0 (2026-10-30)
+
+Keryx: ready for the H15 hard fork (DAA 140,115,000, 2026-10-30, around 14:30 UTC). From the fork
+on, versions before 1.5.0 are invalid. Until it, 1.5.0 mines the current rules, so install it now.
+Solo mining needs keryx-node 1.6.6 or newer. No new flags.
+
+- **Strike risk.** This is the first version on H15's new rules for AI requests. If your rig takes
+  a strike, stop the miner and send `log.txt` on Discord, so the cause can be found before it
+  repeats.
+- Mines the H15 proof of work, tail mode included.
+- AI answers carry what the network needs to check them, and a solo rig answers the network's
+  checks of its own answers by itself.
+- The network now gives far less time per AI request.
+- A request that arrived before the fork is still answered within the time it was given.
+- Pools: a share is sent a third smaller where the pool supports it, with no setting.
+
 ## 1.4.4 (2026-10-27)
 
 A large proof sent to a distant pool is no longer held up for many seconds on the way out.

@@ -50,7 +50,7 @@ times higher, for rigs with many cards.
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.4/fear-miner-1.4.4.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.0/fear-miner-1.5.0.tar.gz` |
 | Hash algorithm | `poscan` |
 | Wallet and worker template | `%WAL%.%WORKER_NAME%` |
 | Pool URL | `stratum+tcp://eu.rplant.xyz:7189` |

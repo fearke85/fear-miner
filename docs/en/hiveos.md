@@ -20,7 +20,7 @@ Create a flight sheet with miner **Custom**:
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.4.4/fear-miner-1.4.4.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.0/fear-miner-1.5.0.tar.gz` |
 | Hash algorithm | from your coin's page |
 | Wallet and worker template | from your coin's page |
 | Pool URL | from your coin's page |
@@ -35,15 +35,15 @@ Apply the flight sheet. The dashboard shows the hashrate once the cards are mini
 ## Install from the rig console
 
 ```
-/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.4.4/fear-miner-1.4.4.tar.gz
+/hive/miners/custom/custom-get https://github.com/fearke85/fear-miner/releases/download/v1.5.0/fear-miner-1.5.0.tar.gz
 ```
 
 Add `-f` to reinstall.
 
 ## Update to a new version
 
-Change the version in the Installation URL, twice: in `v1.4.4` and in
-`fear-miner-1.4.4.tar.gz`. The rest of the flight sheet stays. Keeping the old URL keeps
+Change the version in the Installation URL, twice: in `v1.5.0` and in
+`fear-miner-1.5.0.tar.gz`. The rest of the flight sheet stays. Keeping the old URL keeps
 installing the old version.
 
 Everything the miner keeps (models, keys, the log) stays in `/var/lib/fear-miner` across updates

@@ -6,7 +6,7 @@ Na mineração solo, os blocos vão para o seu próprio node Keryx, em vez de um
 
 ## O que você precisa
 
-- Um node Keryx sincronizado, **keryx-node 1.6.4 ou mais novo** (obrigatório desde o H14), com a
+- Um node Keryx sincronizado, **keryx-node 1.6.6 ou mais novo** (obrigatório desde o H15), com a
   porta gRPC acessível a partir da rig.
 - Sua carteira, para autorizar a rig uma vez.
 

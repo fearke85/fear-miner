@@ -6,7 +6,7 @@ Solo mining sends blocks to your own Keryx node instead of a pool.
 
 ## What you need
 
-- A synced Keryx node, **keryx-node 1.6.4 or newer** (required since H14), with its gRPC port
+- A synced Keryx node, **keryx-node 1.6.6 or newer** (required since H15), with its gRPC port
   reachable from the rig.
 - Your wallet, to authorise the rig once.
 
