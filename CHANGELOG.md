@@ -5,6 +5,14 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.5.4 (2026-11-02)
+
+Keryx: update from 1.5.3. No new flags.
+
+- **Verifiable inference:** more robustness and improvements to the verifiable inference system.
+- The files kept for AI answers stop at 200 MiB and two days, so the models folder does not grow
+  without bound.
+
 ## 1.5.3 (2026-10-30)
 
 Keryx: update from 1.5.2. No new flags.
