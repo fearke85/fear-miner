@@ -5,6 +5,13 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.5.5 (2026-11-02)
+
+Keryx: update from 1.5.4. No new flags.
+
+- **Fix:** on a fresh install, 1.5.4 could stop before it had measured a model load and refuse to
+  serve AI answers. Every tier a card can hold is announced again, as in 1.5.3.
+
 ## 1.5.4 (2026-11-02)
 
 Keryx: update from 1.5.3. No new flags.
