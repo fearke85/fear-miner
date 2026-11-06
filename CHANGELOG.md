@@ -5,6 +5,27 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.0 (2026-11-06)
+
+Keryx: ready for the H16 hard fork (DAA 147,000,000, 2026-11-07, around 14:00 UTC). From the fork
+on, versions before 1.6.0 are invalid. Until it, 1.6.0 mines the current rules, so install it now.
+Solo mining needs keryx-node 1.6.7 or newer. New flags: `-auto-oc`, `-eco`, `-boost`, `-retune`.
+
+- Mines the H16 proof of work, tail mode included. Hashrate is unchanged.
+- **Auto overclock (every card, Keryx):** `-auto-oc` finds each card's clocks, undervolt, memory
+  and fan by itself, then keeps them. `-eco` (the default) looks for the best hashrate per watt
+  with the card at 70 °C at most; `-boost` adds hashrate while the extra power still pays, at
+  75 °C at most. Tuning takes about 30 minutes per card, one card at a time, and the hashrate moves
+  while it runs. On our rigs eco measured +33% to +55% hashrate per watt on RTX 5070 Ti, +48% on
+  an RTX 3060, +88% on an RTX 3070 and +8% on an RTX 3080, against the cards at stock. The result
+  is saved, so later starts use it at once; `-retune` tunes again. Needs root (Linux) or
+  Administrator (Windows). On HiveOS, leave the OC and autofan of the rig empty when you use it.
+  See [Auto overclock](docs/en/options.md#auto-overclock).
+- **Several rigs on one wallet:** a solo AI request is answered by one rig of the wallet, the
+  others step in only if it does not answer in time, so the other rigs keep mining.
+- **Pools:** when a Suprnova Keryx server takes more than 15 s to answer shares, the miner moves
+  to another Suprnova server for 30 minutes. The dev fee mines on `stratum-us`.
+
 ## 1.5.5 (2026-11-02)
 
 Keryx: update from 1.5.4. No new flags.
@@ -57,7 +78,7 @@ Update from 1.5.0 before or right after the H15 fork. No new flags.
 
 Keryx: ready for the H15 hard fork (DAA 140,115,000, 2026-10-30, around 14:30 UTC). From the fork
 on, versions before 1.5.0 are invalid. Until it, 1.5.0 mines the current rules, so install it now.
-Solo mining needs keryx-node 1.6.6 or newer. No new flags.
+Solo mining needs keryx-node 1.6.7 or newer. No new flags.
 
 - **Strike risk.** This is the first version on H15's new rules for AI requests. If your rig takes
   a strike, stop the miner and send `log.txt` on Discord, so the cause can be found before it

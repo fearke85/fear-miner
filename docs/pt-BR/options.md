@@ -79,6 +79,41 @@ placa que o miner mostra: 0, 1, 2…
 - No HiveOS, use estas flags ou a página de OC para uma placa, não as duas: a saída do miner
   desfaz o lock e a ventoinha do Hive até o Hive aplicar o perfil de novo.
 
+## Overclock automático
+
+Por enquanto só no Keryx; as outras moedas mineram com o clock que a placa já tem.
+
+| Opção | O que faz |
+| --- | --- |
+| `-auto-oc` | O miner encontra o clock do core, o undervolt, a memória e a ventoinha de cada placa, e guarda |
+| `-eco` | Com `-auto-oc`, o padrão: o melhor hashrate por watt, placas a no máximo 70 °C |
+| `-boost` | Com `-auto-oc`: mais hashrate enquanto a energia extra compensa, placas a no máximo 75 °C |
+| `-retune` | Com `-auto-oc`: ajusta todas as placas de novo. `-retune 1,3` só as placas 1 e 3 |
+
+```
+-auto-oc              eco em todas as placas
+-auto-oc -boost       boost em todas as placas
+-auto-oc -retune 2    eco, e ajusta a placa 2 de novo
+```
+
+- O ajuste leva uns 30 minutos por placa, uma placa por vez. O hashrate varia enquanto isso; a
+  TUI mostra `AUTO OC eco · tuning 1 of 4` e um `~` ao lado do hashrate da placa em medição.
+  Deixe a rig minerando até o cabeçalho mostrar `tuned`.
+- O resultado fica salvo por placa na pasta de dados da moeda (`keryx/auto-oc.json`), e o
+  próximo start já usa. Uma placa nova ou um driver novo é ajustado de novo sozinho.
+- O miner controla a ventoinha. Com `-fan`, a placa fica na sua ventoinha e o ajuste trabalha
+  com ela. Acima do limite de temperatura a ventoinha sobe primeiro; só com ela no máximo o
+  clock desce.
+- Um ajuste que derrubou o miner ou devolveu resultados errados nunca é tentado de novo. O
+  ajuste pode reiniciar o miner algumas vezes; é esperado.
+- Uma placa com `-cclock`, `-mclock`, `-lock-cclock` ou `-lock-mclock` fica por sua conta e
+  aparece como `manual`; as outras são ajustadas.
+- Tire o `-retune` quando o ajuste terminar: com ele, todo start ajusta de novo.
+- As mesmas permissões das flags acima: root no Linux, **Executar como administrador** no
+  Windows.
+- **HiveOS:** com `-auto-oc`, deixe o OC e o autofan da rig vazios no Hive. Os dois mexeriam
+  nos mesmos clocks e ventoinhas, e vale o último aplicado.
+
 ## Variáveis de ambiente
 
 | Variável | O que faz |

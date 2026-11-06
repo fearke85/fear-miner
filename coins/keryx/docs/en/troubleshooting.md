@@ -8,8 +8,8 @@ CUDA device", risers, crashes from overclock) are in the
 
 ## Shares are rejected since 2026-10-30
 
-Versions before 1.5.0 are invalid since the H15 hard fork. Install the
-[current version](../../../../README.md). Solo: update your node to keryx-node 1.6.6 or newer.
+Versions before 1.6.0 are invalid since the H16 hard fork. Install the
+[current version](../../../../README.md). Solo: update your node to keryx-node 1.6.7 or newer.
 
 ## "no device fits a tier"
 

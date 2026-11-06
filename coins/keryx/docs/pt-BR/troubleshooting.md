@@ -8,8 +8,8 @@ HiveOS, "no CUDA device", risers, crashes por overclock) estão na
 
 ## Shares rejeitados desde 30/10/2026
 
-Versões anteriores à 1.5.0 são inválidas desde o hard fork H15. Instale a
-[versão atual](../../../../README.pt-BR.md). Solo: atualize o seu node para o keryx-node 1.6.6 ou
+Versões anteriores à 1.6.0 são inválidas desde o hard fork H16. Instale a
+[versão atual](../../../../README.pt-BR.md). Solo: atualize o seu node para o keryx-node 1.6.7 ou
 mais novo.
 
 ## "no device fits a tier"

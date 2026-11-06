@@ -5,9 +5,9 @@
 Como minerar Keryx com o fear-miner. Algoritmo: `keryxhash`.
 
 > [!WARNING]
-> **O hard fork H15** ativa no DAA 140.115.000 (30/10/2026, por volta das 11:30 de Brasília). A
-> partir daí, versões anteriores à 1.5.0 são inválidas: a rede rejeita os shares e blocos delas.
-> Quem minera solo precisa do keryx-node 1.6.6 ou mais novo.
+> **O hard fork H16** ativa no DAA 147.000.000 (07/11/2026, por volta das 11:00 de Brasília). A
+> partir daí, versões anteriores à 1.6.0 são inválidas: a rede rejeita os shares e blocos delas.
+> Quem minera solo precisa do keryx-node 1.6.7 ou mais novo.
 
 ## Placas
 
@@ -42,7 +42,7 @@ Instale o pacote pelo guia da sua plataforma e use estes valores.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.5.5/fear-miner-1.5.5.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.0/fear-miner-1.6.0.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORTA` do seu node |

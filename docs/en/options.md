@@ -77,6 +77,40 @@ miner shows: 0, 1, 2…
 - On HiveOS, use either these flags or the OC page for a card, not both: the miner's exit
   undoes Hive's lock and fan until Hive applies its profile again.
 
+## Auto overclock
+
+Keryx only for now; other coins mine with the clocks the card has.
+
+| Option | What it does |
+| --- | --- |
+| `-auto-oc` | The miner finds each card's core clock, undervolt, memory and fan, and keeps them |
+| `-eco` | With `-auto-oc`, the default: the best hashrate per watt, cards at 70 °C at most |
+| `-boost` | With `-auto-oc`: more hashrate while the extra power still pays, cards at 75 °C at most |
+| `-retune` | With `-auto-oc`: tune every card again. `-retune 1,3` tunes cards 1 and 3 only |
+
+```
+-auto-oc              eco on every card
+-auto-oc -boost       boost on every card
+-auto-oc -retune 2    eco, and tune card 2 again
+```
+
+- Tuning takes about 30 minutes per card, one card at a time. The hashrate moves while it
+  runs; the TUI shows `AUTO OC eco · tuning 1 of 4` and a `~` beside the hashrate of the card
+  being measured. Leave the rig mining until the header says `tuned`.
+- The result is saved per card in the coin's data folder (`keryx/auto-oc.json`), so the next
+  start uses it at once. A new card or a new driver is tuned again by itself.
+- The miner sets the fan. With `-fan` the card keeps your fan and the tuning works under it.
+  Above the temperature limit the fan goes up first, and only at full fan does the clock come
+  down.
+- A setting that crashed the miner or returned wrong results is never tried again. Tuning can
+  restart the miner a few times; that is expected.
+- A card given `-cclock`, `-mclock`, `-lock-cclock` or `-lock-mclock` is left to you and shows
+  `manual`; the other cards are tuned.
+- Remove `-retune` once tuning is done: with it, every start tunes again.
+- Same permissions as the flags above: root on Linux, **Run as administrator** on Windows.
+- **HiveOS:** with `-auto-oc`, leave the rig's OC and autofan empty in Hive. Both would set the
+  same clocks and fans, and the last one applied wins.
+
 ## Environment variables
 
 | Variable | What it does |
