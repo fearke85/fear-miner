@@ -5,6 +5,16 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.2 (2026-11-07)
+
+Keryx: urgent update from 1.6.1, solo and pool. No new flags.
+
+- **Fix:** after a restart, a rig that had answered short AI requests could stop serving a tier
+  for good ("no single-card plan fits this rig"), and the cards of that tier stopped mining. On
+  our rig both RTX 5070 Ti sat idle. Updating is enough: the tier mines and serves again, no
+  setting to change.
+- **Auto overclock:** a card that does not mine no longer delays tuning of the other cards.
+
 ## 1.6.1 (2026-11-07)
 
 Keryx: urgent update from 1.6.0, solo and pool. No new flags.
