@@ -30,6 +30,9 @@ tier's AI requests. You do not need `--tier`.
 | 24 GB | 3 | ~17 GB |
 | 32 GB or more | 4 | ~30 GB |
 
+Each AI answer is also kept on disk for 12 hours, tens of MB per answer, so leave a few GB free
+beyond the model on a rig that answers many requests.
+
 With a monitor attached, what the desktop takes does not count, and a card near the edge may
 mine one tier lower.
 
@@ -42,7 +45,7 @@ Install the package with your platform's guide, then use these values.
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.0/fear-miner-1.6.0.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.1/fear-miner-1.6.1.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORT` of your node |

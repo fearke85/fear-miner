@@ -94,9 +94,10 @@ Keryx only for now; other coins mine with the clocks the card has.
 -auto-oc -retune 2    eco, and tune card 2 again
 ```
 
-- Tuning takes about 30 minutes per card, one card at a time. The hashrate moves while it
-  runs; the TUI shows `AUTO OC eco · tuning 1 of 4` and a `~` beside the hashrate of the card
-  being measured. Leave the rig mining until the header says `tuned`.
+- Every card is tuned at the same time; the whole rig takes about 30 to 45 minutes. The
+  hashrate moves while it runs; the TUI shows `AUTO OC eco · tuning 4 of 4` (cards still
+  tuning) and a `~` beside the hashrate of each card being measured. Leave the rig mining until
+  the header says `tuned`.
 - The result is saved per card in the coin's data folder (`keryx/auto-oc.json`), so the next
   start uses it at once. A new card or a new driver is tuned again by itself.
 - The miner sets the fan. With `-fan` the card keeps your fan and the tuning works under it.

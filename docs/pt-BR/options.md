@@ -96,9 +96,10 @@ Por enquanto só no Keryx; as outras moedas mineram com o clock que a placa já 
 -auto-oc -retune 2    eco, e ajusta a placa 2 de novo
 ```
 
-- O ajuste leva uns 30 minutos por placa, uma placa por vez. O hashrate varia enquanto isso; a
-  TUI mostra `AUTO OC eco · tuning 1 of 4` e um `~` ao lado do hashrate da placa em medição.
-  Deixe a rig minerando até o cabeçalho mostrar `tuned`.
+- Todas as placas são ajustadas ao mesmo tempo; a rig inteira leva uns 30 a 45 minutos. O
+  hashrate varia enquanto isso; a TUI mostra `AUTO OC eco · tuning 4 of 4` (placas ainda em
+  ajuste) e um `~` ao lado do hashrate de cada placa em medição. Deixe a rig minerando até o
+  cabeçalho mostrar `tuned`.
 - O resultado fica salvo por placa na pasta de dados da moeda (`keryx/auto-oc.json`), e o
   próximo start já usa. Uma placa nova ou um driver novo é ajustado de novo sozinho.
 - O miner controla a ventoinha. Com `-fan`, a placa fica na sua ventoinha e o ajuste trabalha

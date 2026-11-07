@@ -5,6 +5,20 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.1 (2026-11-07)
+
+Keryx: urgent update from 1.6.0, solo and pool. No new flags.
+
+- **Fix (strikes):** a rig that had answered a few AI requests could delete an answer the network
+  could still check, or fail to save a new one, and both ended in strikes. Every answer is now
+  kept until the network can no longer check it (12 hours) and is then removed by itself, so the
+  disk does not fill up. The miner always leaves 200 MiB free on that disk and warns when it is
+  almost full.
+- **Auto overclock:** every card of the rig tunes at the same time, so a rig finishes in about the
+  time one card took (about 40 minutes instead of 3.5 hours on our 4-card rig).
+- **HiveOS:** the auto overclock result is kept across miner updates; 1.6.0 tuned every card
+  again after each update.
+
 ## 1.6.0 (2026-11-06)
 
 Keryx: ready for the H16 hard fork (DAA 147,000,000, 2026-11-07, around 14:00 UTC). From the fork
