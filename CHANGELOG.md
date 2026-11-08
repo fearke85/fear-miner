@@ -5,6 +5,19 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.3 (2026-11-08)
+
+Keryx: test update from 1.6.2, solo and pool. No new flags.
+
+- **Fix:** a rig could still stop serving a tier at start ("no tier has a single-card AI plan"),
+  and the miner exited. On a CMP 170HX every start ended this way on tier 4. Tiers 3 and 4 now
+  start and serve on that card.
+- **Fix:** what the miner learns about each card's AI speed is now kept after every answer;
+  before, some rigs lost it at every restart.
+- **New on the screen:** **AI processed**, the AI answers your pool or node accepted, and in solo
+  **AI paid**, the AI rewards the network paid to your wallet, with their KRX. A reward arrives
+  about 12 hours after its answer. Both are kept across restarts. They replace "Ai served".
+
 ## 1.6.2 (2026-11-07)
 
 Keryx: urgent update from 1.6.1, solo and pool. No new flags.

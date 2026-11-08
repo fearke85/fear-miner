@@ -45,7 +45,7 @@ Install the package with your platform's guide, then use these values.
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.2/fear-miner-1.6.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.3/fear-miner-1.6.3.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORT` of your node |
@@ -77,6 +77,12 @@ check `log.txt`. More in [troubleshooting](docs/en/troubleshooting.md).
 
 Since H15 the network gives far less time to answer. A request that arrives while the model is
 not loaded may be answered late.
+
+The miner's screen shows **AI processed**, the answers your pool or node accepted, and in solo
+**AI paid**, the AI rewards the network paid to your wallet and their KRX. A reward arrives about
+12 hours after its answer; one that arrives while the miner is stopped is paid but not counted.
+Both counts are kept per wallet across restarts. Rigs that mine to the same wallet each count all
+of that wallet's rewards.
 
 ## More
 

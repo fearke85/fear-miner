@@ -45,7 +45,7 @@ Instale o pacote pelo guia da sua plataforma e use estes valores.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.2/fear-miner-1.6.2.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.3/fear-miner-1.6.3.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORTA` do seu node |
@@ -77,6 +77,12 @@ estáveis, e confira o `log.txt`. Mais em [solução de problemas](docs/pt-BR/tr
 
 Desde o H15 a rede dá bem menos tempo para responder. Um pedido que chega com o modelo
 descarregado pode ser respondido com atraso.
+
+A tela do miner mostra **AI processed**, as respostas que o seu pool ou nó aceitou, e no solo
+**AI paid**, as recompensas de IA que a rede pagou à sua carteira e o valor em KRX. Uma recompensa
+chega cerca de 12 horas depois da resposta; a que chega com o miner parado é paga, mas não entra
+na contagem. As duas contagens ficam guardadas por carteira entre reinícios. Rigs que mineram para
+a mesma carteira contam, cada uma, todas as recompensas dessa carteira.
 
 ## Mais
 
