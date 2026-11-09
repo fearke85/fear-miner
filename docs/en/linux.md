@@ -14,8 +14,8 @@ your coin are on its page: [Keryx](../../coins/keryx/README.md#start-keryxsh-lin
 ## Install
 
 ```
-wget https://github.com/fearke85/fear-miner/releases/download/v1.6.3/fear-miner-linux-1.6.3.tar.gz
-tar -xzf fear-miner-linux-1.6.3.tar.gz
+wget https://github.com/fearke85/fear-miner/releases/download/v1.6.4/fear-miner-linux-1.6.4.tar.gz
+tar -xzf fear-miner-linux-1.6.4.tar.gz
 cd fear-miner
 nano start-keryx.sh        # Vela: start-vela.sh
 ```

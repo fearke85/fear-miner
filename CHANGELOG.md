@@ -5,6 +5,18 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.4 (2026-11-08)
+
+Keryx: test update from 1.6.3, solo and pool. No new flags.
+
+- **Fix:** on RTX 20, RTX 30 and RTX 40 cards and the CMP 170HX, the network's check of an AI answer
+  to a long prompt could fail on every try and end in a strike. Measured at 10,000 to 14,000 prompt
+  tokens: 3 to 22% of these checks failed before, none now. RTX 50 cards were not affected.
+- On those cards, reading a long prompt takes up to 11% longer on some tiers, well inside the time
+  the network allows. Tier 1 is unchanged.
+- On those cards, a check of an answer given before the update cannot be answered after it. Update
+  once and leave the miner running.
+
 ## 1.6.3 (2026-11-08)
 
 Keryx: test update from 1.6.2, solo and pool. No new flags.
