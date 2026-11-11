@@ -11,8 +11,7 @@ Keryx: test update from 1.6.4, solo and pool. No new flags.
 
 - **New pool:** Cryo Pool, `stratum+ssl://krx.cryo-pool.com:5555`, can be set as the pool address,
   on the flight sheet or in `-pool`. `stratum+ssl://` and `stratum+tls://` connect over TLS
-  (Suprnova's 4405 too); `host:port` and `stratum+tcp://` stay plain. The pool sees the rig as
-  the official miner 0.6.2.
+  (Suprnova's 4405 too); `host:port` and `stratum+tcp://` stay plain.
 - **Faster AI answers:** while a card answers an AI request it now runs at the graphics driver's
   clocks, and the moment it mines again your overclock (yours or `-auto-oc`'s) comes back. Measured
   on tier 2 (Gemma-4-12B): 9.95% faster answers on one RTX 5070 Ti (60.7 to 67.4 tokens/s) and
