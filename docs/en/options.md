@@ -29,7 +29,7 @@ Paths are one word, with no quotes.
 | --- | --- | --- |
 | `-coin keryxhash` | Coin to mine: `keryxhash` or `vela`. Same as a positional `keryxhash`; when both are set, `-coin` wins | required |
 | `-device 0,2,5` | Mine on these cards only, by the numbers the miner shows | `all` |
-| `-pool host:port` | Pool to mine on | set by the launcher |
+| `-pool host:port` | Pool to mine on: `host:port`, `stratum+tcp://host:port` (plain) or `stratum+ssl://host:port` (encrypted) | set by the launcher |
 | `-node grpc://IP:PORT` | Your node, for solo mining | set by the launcher |
 | `-wallet ADDRESS` | Payout address. `-address` is the same field; the last one wins | set by the launcher |
 | `-worker NAME` | Rig name. Replaces the part of the wallet after the first `.` | |
@@ -107,6 +107,11 @@ Keryx only for now; other coins mine with the clocks the card has.
   restart the miner a few times; that is expected.
 - A card given `-cclock`, `-mclock`, `-lock-cclock` or `-lock-mclock` is left to you and shows
   `manual`; the other cards are tuned.
+- While a card answers an AI request it runs on the graphics driver's clocks, and the moment it
+  mines again the overclock (yours or `-auto-oc`'s) comes back. Only the clocks the miner set
+  are switched; a card with only `-fan`, or clocked by Hive, keeps what it has.
+- This includes `-boost` and manual clocks: an aggressive overclock can crash token generation,
+  so the driver's clocks are the safe baseline for every answer.
 - Remove `-retune` once tuning is done: with it, every start tunes again.
 - Same permissions as the flags above: root on Linux, **Run as administrator** on Windows.
 - **HiveOS:** with `-auto-oc`, leave the rig's OC and autofan empty in Hive. Both would set the

@@ -29,7 +29,7 @@ Caminhos são uma palavra só, sem aspas.
 | --- | --- | --- |
 | `-coin keryxhash` | Moeda a minerar: `keryxhash` ou `vela`. Igual ao positional `keryxhash`; os dois juntos, vale `-coin` | obrigatório |
 | `-device 0,2,5` | Minera só nessas placas, pelos números que o miner mostra | `all` |
-| `-pool host:porta` | Pool onde minerar | definido pelo lançador |
+| `-pool host:porta` | Pool onde minerar: `host:porta`, `stratum+tcp://host:porta` (simples) ou `stratum+ssl://host:porta` (criptografado) | definido pelo lançador |
 | `-node grpc://IP:PORTA` | Seu node, para minerar solo | definido pelo lançador |
 | `-wallet ENDERECO` | Endereço de pagamento. `-address` é o mesmo campo; vale o último | definido pelo lançador |
 | `-worker NOME` | Nome da rig. Substitui o trecho da carteira depois do primeiro `.` | |
@@ -109,6 +109,11 @@ Por enquanto só no Keryx; as outras moedas mineram com o clock que a placa já 
   ajuste pode reiniciar o miner algumas vezes; é esperado.
 - Uma placa com `-cclock`, `-mclock`, `-lock-cclock` ou `-lock-mclock` fica por sua conta e
   aparece como `manual`; as outras são ajustadas.
+- Enquanto uma placa responde a um pedido de IA, ela roda nos clocks do driver; assim que volta
+  a minerar, o overclock (seu ou do `-auto-oc`) volta. Só os clocks que o miner definiu são
+  trocados; uma placa só com `-fan`, ou com OC do Hive, fica como está.
+- Isso vale também para `-boost` e clocks manuais: um overclock agressivo pode derrubar a
+  geração de tokens, então os clocks do driver são a base segura para toda resposta.
 - Tire o `-retune` quando o ajuste terminar: com ele, todo start ajusta de novo.
 - As mesmas permissões das flags acima: root no Linux, **Executar como administrador** no
   Windows.

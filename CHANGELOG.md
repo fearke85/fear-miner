@@ -5,6 +5,30 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.5 (2026-11-11)
+
+Keryx: test update from 1.6.4, solo and pool. No new flags.
+
+- **New pool:** Cryo Pool, `stratum+ssl://krx.cryo-pool.com:5555`, can be set as the pool address,
+  on the flight sheet or in `-pool`. `stratum+ssl://` and `stratum+tls://` connect over TLS
+  (Suprnova's 4405 too); `host:port` and `stratum+tcp://` stay plain. The pool sees the rig as
+  the official miner 0.6.2.
+- **Faster AI answers:** while a card answers an AI request it now runs at the graphics driver's
+  clocks, and the moment it mines again your overclock (yours or `-auto-oc`'s) comes back. Measured
+  on tier 2 (Gemma-4-12B): 9.95% faster answers on one RTX 5070 Ti (60.7 to 67.4 tokens/s) and
+  15.2% on the other (56.1 to 66.3), fan unchanged. `-boost` and manual clocks are set aside too,
+  because an aggressive overclock can crash token generation. A card with only `-fan`, or clocked
+  by HiveOS, keeps what it has.
+- **RTX 20 desktop:** about 1% more hashrate and 1.7% more per watt on cards whose power limit is
+  150 W or more. Measured on three RTX 2070 SUPER: 1,527-1,530 to 1,548-1,551 kH/s at 215 W.
+  Laptop RTX 20 cards keep the previous speed.
+- **RTX 30 with no clock set:** the miner adjusts itself to the faster setting after start and
+  rechecks it every 30 minutes: +2.9% hashrate measured on a 3070 and a 3080 (+3.0 to 3.5% per
+  watt). With the auto overclock the speed is unchanged.
+- **Start check:** the first job on each card is checked against the network's rules. A card that
+  fails stops with one line in the log and the others keep mining, instead of sending shares the
+  node refuses.
+
 ## 1.6.4 (2026-11-08)
 
 Keryx: test update from 1.6.3, solo and pool. No new flags.

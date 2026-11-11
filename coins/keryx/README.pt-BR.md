@@ -45,10 +45,10 @@ Instale o pacote pelo guia da sua plataforma e use estes valores.
 | Campo | Valor |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.4/fear-miner-1.6.4.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.5/fear-miner-1.6.5.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
-| Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`. Solo: `grpc://IP:PORTA` do seu node |
+| Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`, ou `stratum+ssl://krx.cryo-pool.com:5555`. Solo: `grpc://IP:PORTA` do seu node |
 | Password | `x`, ou a senha da pool |
 
 A carteira é o seu endereço Keryx, `keryx:...`. Guia de instalação: [HiveOS](../../docs/pt-BR/hiveos.md).
@@ -65,6 +65,18 @@ linha da pool e tire o comentário da linha solo.
 | `-pool` | `krx.suprnova.cc:4404` |
 | `-node` | Só solo: `grpc://IP:PORTA` do seu node |
 | `--escrow-cert` | Só solo, primeira execução: veja [mineração solo](docs/pt-BR/solo.md) |
+
+### Pools
+
+| Pool | Endereço | Transporte |
+| --- | --- | --- |
+| Suprnova | `krx.suprnova.cc:4404` (UE), `stratum-us.suprnova.cc:4404` (EUA) | simples; `stratum+ssl://krx.suprnova.cc:4405` também funciona |
+| Cryo Pool | `krx.cryo-pool.com:5555` | só criptografado: `stratum+ssl://krx.cryo-pool.com:5555` |
+
+O `-pool` aceita `host:porta` ou uma URL stratum; `stratum+ssl://` (ou `stratum+tls://`) conecta
+com TLS. O miner confere o certificado da pool, então um endereço sem certificado válido não
+conecta. A mesma carteira e o mesmo worker valem nas duas pools; cada uma tem o seu painel. No
+HiveOS, coloque a URL completa no campo Pool URL.
 
 Guias de instalação: [Linux](../../docs/pt-BR/linux.md) · [Windows](../../docs/pt-BR/windows.md).
 
