@@ -5,6 +5,21 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.6 (2026-11-11)
+
+Keryx: update from 1.6.5, solo and pool. No new flags. This build is for the H16 network rules
+(DAA 147,000,000 and later).
+
+- **200 MiB less graphics memory per card:** every tier now leaves 200 MiB more free. On a 16 GB
+  RTX 5070 Ti at tier 2, the card keeps about 1.7 GiB free with the mining job, against 1.5 GiB
+  before; hashrate is unchanged in the comparison.
+- **AI answers on tight cards:** when the AI model does not fit while the card keeps mining, the
+  miner now frees it after the answer and logs that, instead of unloading and reloading it
+  between requests. Two consecutive AI requests reused the loaded model on the measured card.
+  On Windows, where less memory is usable, the card gets the same 200 MiB back.
+- **HiveOS fix:** a data folder owned by root no longer causes permission errors when the miner
+  writes its files.
+
 ## 1.6.5 (2026-11-11)
 
 Keryx: test update from 1.6.4, solo and pool. No new flags.
