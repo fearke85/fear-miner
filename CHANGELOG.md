@@ -5,7 +5,7 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
-## 1.6.6 (2026-11-11)
+## 1.6.6 (2026-11-12)
 
 Keryx: update from 1.6.5, solo and pool. No new flags. This build is for the H16 network rules
 (DAA 147,000,000 and later).
