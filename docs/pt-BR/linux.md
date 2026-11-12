@@ -15,8 +15,8 @@ valores da sua moeda estão na página dela: [Keryx](../../coins/keryx/README.pt
 ## Instalar
 
 ```
-wget https://github.com/fearke85/fear-miner/releases/download/v1.6.6/fear-miner-linux-1.6.6.tar.gz
-tar -xzf fear-miner-linux-1.6.6.tar.gz
+wget https://github.com/fearke85/fear-miner/releases/download/v1.6.7/fear-miner-linux-1.6.7.tar.gz
+tar -xzf fear-miner-linux-1.6.7.tar.gz
 cd fear-miner
 nano start-keryx.sh        # Vela: start-vela.sh
 ```

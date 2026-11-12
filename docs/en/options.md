@@ -87,11 +87,13 @@ Keryx only for now; other coins mine with the clocks the card has.
 | `-eco` | With `-auto-oc`, the default: the best hashrate per watt, cards at 70 °C at most |
 | `-boost` | With `-auto-oc`: more hashrate while the extra power still pays, cards at 75 °C at most |
 | `-retune` | With `-auto-oc`: tune every card again. `-retune 1,3` tunes cards 1 and 3 only |
+| `-max-fan` | With `-auto-oc`: the most fan the miner may set, in percent. Default 100. `-max-fan 80,*,100` per card |
 
 ```
 -auto-oc              eco on every card
 -auto-oc -boost       boost on every card
 -auto-oc -retune 2    eco, and tune card 2 again
+-auto-oc -max-fan 80  eco, and never run the fan above 80%
 ```
 
 - Every card is tuned at the same time; the whole rig takes about 30 to 45 minutes. The
@@ -101,8 +103,10 @@ Keryx only for now; other coins mine with the clocks the card has.
 - The result is saved per card in the coin's data folder (`keryx/auto-oc.json`), so the next
   start uses it at once. A new card or a new driver is tuned again by itself.
 - The miner sets the fan. With `-fan` the card keeps your fan and the tuning works under it.
-  Above the temperature limit the fan goes up first, and only at full fan does the clock come
-  down.
+  Above the temperature limit the fan goes up first, up to `-max-fan` (100% by default), and
+  only at that limit does the clock come down. `-max-fan` cannot be combined with `-fan`.
+  Changing `-max-fan` tunes the card again at the new fan, because the old temperatures were
+  measured with other cooling.
 - A setting that crashed the miner or returned wrong results is never tried again. Tuning can
   restart the miner a few times; that is expected.
 - A card given `-cclock`, `-mclock`, `-lock-cclock` or `-lock-mclock` is left to you and shows

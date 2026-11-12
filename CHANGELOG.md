@@ -5,6 +5,22 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.7 (2026-11-12)
+
+Keryx: update from 1.6.6, solo and pool. New flag: `-max-fan`.
+
+- **Cooling before clocks:** with `-auto-oc`, a card at its temperature limit now raises the fan
+  to the limit before lowering its clock. The limit is 100% by default; `-max-fan 80` caps it for
+  every card, and `-max-fan 80,*,100` gives one value per card in `-device` order. `-max-fan`
+  works only with `-auto-oc` and cannot be combined with `-fan`.
+- **Cards with a fixed fan:** a card on `-fan` now steps its clock down when it stays over the
+  temperature limit; before, many of them kept the clock and ran hot.
+- **Existing auto overclocks keep working.** A card tuned before this version keeps its saved
+  setting and uses the new 100% limit. Changing `-max-fan` tunes the card again at the new fan,
+  because the temperatures of the old setting were measured with other cooling.
+- **Quieter rigs:** the 100% default can be louder than before on a hot card; set `-max-fan` to
+  the noise level your rig allows.
+
 ## 1.6.6 (2026-11-12)
 
 Keryx: update from 1.6.5, solo and pool. No new flags. This build is for the H16 network rules

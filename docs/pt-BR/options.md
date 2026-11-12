@@ -89,11 +89,13 @@ Por enquanto só no Keryx; as outras moedas mineram com o clock que a placa já 
 | `-eco` | Com `-auto-oc`, o padrão: o melhor hashrate por watt, placas a no máximo 70 °C |
 | `-boost` | Com `-auto-oc`: mais hashrate enquanto a energia extra compensa, placas a no máximo 75 °C |
 | `-retune` | Com `-auto-oc`: ajusta todas as placas de novo. `-retune 1,3` só as placas 1 e 3 |
+| `-max-fan` | Com `-auto-oc`: o máximo de ventoinha que o miner pode usar, em porcentagem. Padrão 100. `-max-fan 80,*,100` por placa |
 
 ```
 -auto-oc              eco em todas as placas
 -auto-oc -boost       boost em todas as placas
 -auto-oc -retune 2    eco, e ajusta a placa 2 de novo
+-auto-oc -max-fan 80  eco, e a ventoinha nunca passa de 80%
 ```
 
 - Todas as placas são ajustadas ao mesmo tempo; a rig inteira leva uns 30 a 45 minutos. O
@@ -103,8 +105,10 @@ Por enquanto só no Keryx; as outras moedas mineram com o clock que a placa já 
 - O resultado fica salvo por placa na pasta de dados da moeda (`keryx/auto-oc.json`), e o
   próximo start já usa. Uma placa nova ou um driver novo é ajustado de novo sozinho.
 - O miner controla a ventoinha. Com `-fan`, a placa fica na sua ventoinha e o ajuste trabalha
-  com ela. Acima do limite de temperatura a ventoinha sobe primeiro; só com ela no máximo o
-  clock desce.
+  com ela. Acima do limite de temperatura a ventoinha sobe primeiro, até o `-max-fan` (100% por
+  padrão); só nesse limite o clock desce. O `-max-fan` não pode ser usado junto com `-fan`.
+  Mudar o `-max-fan` ajusta a placa de novo na ventoinha nova, porque as temperaturas antigas
+  foram medidas com outra refrigeração.
 - Um ajuste que derrubou o miner ou devolveu resultados errados nunca é tentado de novo. O
   ajuste pode reiniciar o miner algumas vezes; é esperado.
 - Uma placa com `-cclock`, `-mclock`, `-lock-cclock` ou `-lock-mclock` fica por sua conta e
