@@ -45,7 +45,7 @@ Install the package with your platform's guide, then use these values.
 | Field | Value |
 | --- | --- |
 | Miner name | `fear-miner` |
-| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.7/fear-miner-1.6.7.tar.gz` |
+| Installation URL | `https://github.com/fearke85/fear-miner/releases/download/v1.6.8/fear-miner-1.6.8.tar.gz` |
 | Hash algorithm | `keryxhash` |
 | Wallet and worker template | Pool: `%WAL%.%WORKER_NAME%`. Solo: `%WAL%` |
 | Pool URL | Pool: `stratum+tcp://krx.suprnova.cc:4404`, or `stratum+ssl://krx.cryo-pool.com:5555`. Solo: `grpc://IP:PORT` of your node |

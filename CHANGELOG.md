@@ -5,6 +5,23 @@ for one coin names it. Before 1.3.0, every change listed is for Keryx.
 
 Keryx: versions before 0.0.22 are invalid since the H14 hard fork (2026-10-09) and are not listed.
 
+## 1.6.8 (2026-11-13)
+
+Keryx: test update from 1.6.7, solo and pool. No new flags.
+
+- **No more stale shares held at the rig on SSL pools:** on a `stratum+ssl://` pool (Cryo Pool,
+  Suprnova's 4405) the end of a share could stay at the rig until the next share went out, seconds
+  to minutes later, and the pool then refused it as stale ("job not found"). Each share now leaves
+  whole at once. Measured on Cryo Pool: 60 shares accepted, 0 stale, slowest answer 320 ms; before,
+  2 of 33 shares waited 7 s and 31 s.
+- **Cryo Pool:** a share found on a job the pool has already dropped is no longer sent, as on
+  Suprnova. After the pool has been slow to answer, fresh shares go out again as soon as it is
+  quick again, instead of being discarded.
+- **Clearer share log:** each answered share shows how long it took to leave the rig and how long
+  the pool took to answer it, so a slow pool can be told from a slow connection.
+- **RTX 50:** 1.3 to 1.9% more hashes per watt at the same hashrate, about 4 to 5 W less per card.
+  Measured on two RTX 5070 Ti at tier 2 on the pool, 0 rejected.
+
 ## 1.6.7 (2026-11-12)
 
 Keryx: update from 1.6.6, solo and pool. New flag: `-max-fan`.
